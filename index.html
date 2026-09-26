@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samal Rout Cup ® | Rules & Regulations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #04060f;
+            --accent-neon: #00ff9d;
+            --accent-blue: #00d2ff;
+            --accent-gold: #ffb703;
+            --text-main: #f8fafc;
+            --text-muted: #64748b;
+            
+            /* High-Intensity Glow Profiles */
+            --neon-glow: 0 0 20px rgba(0, 255, 157, 0.35);
+            --blue-glow: 0 0 20px rgba(0, 210, 255, 0.35);
+            --card-glass: rgba(11, 17, 33, 0.65);
+            --border-glass: rgba(255, 255, 255, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-dark);
+            /* Saturated Neon Aurora Mesh Background Effect */
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(0, 210, 255, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 90% 35%, rgba(0, 255, 157, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 30% 85%, rgba(147, 51, 234, 0.12) 0%, transparent 45%),
+                linear-gradient(180deg, #070b19 0%, #03050c 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 60px 20px;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Vibrant High-Tech Header Dashboard */
+        header {
+            text-align: center;
+            padding: 80px 40px;
+            background: rgba(8, 14, 28, 0.45);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 32px;
+            margin-bottom: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #00d2ff, #00ff9d, #ffb703, #00d2ff);
+            background-size: 300% 100%;
+            animation: borderFlow 8s linear infinite;
+        }
+
+        @keyframes borderFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #ffffff 20%, #a5f3fc 60%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6));
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 255, 157, 0.15), rgba(0, 210, 255, 0.15));
+            color: var(--accent-neon);
+            padding: 8px 26px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 15px;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: var(--neon-glow);
+        }
+
+        .date-info {
+            margin-top: 35px;
+            font-size: 1.05rem;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+        }
+        
+        .date-info strong {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #fff;
+            font-size: 1.4rem;
+            display: block;
+            margin-top: 8px;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .welcome-msg {
+            background: linear-gradient(135deg, rgba(14, 22, 43, 0.7), rgba(8, 12, 24, 0.7));
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 28px 32px;
+            border-radius: 24px;
+            margin-bottom: 45px;
+            border: 1px solid var(--border-glass);
+            border-left: 5px solid var(--accent-blue);
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        /* Accordion Clauses Interface */
+        .clauses-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .clause-item {
+            background: var(--card-glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .clause-item:hover {
+            border-color: rgba(0, 255, 157, 0.35);
+            background: rgba(16, 29, 58, 0.6);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 12px 35px rgba(0, 255, 157, 0.12);
+        }
+
+        .clause-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 32px;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .clause-title {
+            padding-right: 20px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .clause-item:hover .clause-title {
+            color: #fff;
+        }
+
+        .icon-toggle {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 32px;
+            height: 32px;
+            background: rgba(0, 210, 255, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
+            flex-shrink: 0;
+        }
+
+        .clause-item.active {
+            border-color: rgba(0, 255, 157, 0.5);
+            background: rgba(9, 16, 33, 0.85);
+            box-shadow: 0 15px 40px rgba(0, 255, 157, 0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        .clause-item.active .clause-title {
+            color: var(--accent-neon);
+            text-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+        }
+
+        .clause-item.active .icon-toggle {
+            transform: rotate(45deg);
+            color: var(--accent-neon);
+            background: rgba(0, 255, 157, 0.1);
+            border-color: rgba(0, 255, 157, 0.4);
+            box-shadow: var(--neon-glow);
+        }
+
+        .clause-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .clause-content {
+            padding: 26px 32px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .part-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 3px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .clause-item.active .part-row {
+            border-left-color: var(--accent-blue);
+            background: rgba(0, 210, 255, 0.01);
+        }
+
+        .clause-item.active .part-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-left-color: var(--accent-neon);
+            transform: translateX(4px);
+        }
+
+        .part-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .part-text {
+            color: #cbd5e1;
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        /* Mandatory Attire Note */
+        .mandatory-note {
+            background: linear-gradient(90deg, rgba(255,183,3,0.06) 0%, rgba(0,0,0,0) 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 24px;
+            border-radius: 16px;
+            margin-top: 50px;
+            font-size: 1rem;
+            border-top: 1px solid rgba(255,183,3,0.04);
+            border-bottom: 1px solid rgba(255,183,3,0.04);
+            color: #e2e8f0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Executive Committee */
+        .organizers-section {
+            margin-top: 60px;
+            background: rgba(10, 16, 31, 0.3);
+            border: 1px solid var(--border-glass);
+            border-radius: 28px;
+            padding: 45px 35px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .organizers-title {
+            text-align: center;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 35px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .organizers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .organizer-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 20px;
+            padding: 24px 15px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .organizer-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(0, 255, 157, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .org-avatar {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(0, 255, 157, 0.15));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+        }
+
+        .organizer-card:hover .org-avatar {
+            border-color: var(--accent-neon);
+            box-shadow: var(--neon-glow);
+            transform: scale(1.05);
+        }
+
+        .org-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            letter-spacing: 0.3px;
+        }
+
+        .org-role {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* Disclaimer Box */
+        .disclaimer-box {
+            margin-top: 35px;
+            padding: 26px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+            border: 1px dashed rgba(255,255,255,0.06);
+            line-height: 1.6;
+        }
+
+        .disclaimer-box h4 {
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 70px;
+            text-align: center;
+            padding: 50px 20px 20px;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        footer p {
+            color: #64748b;
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+        }
+
+        .portal-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, #0284c7 100%);
+            color: #fff;
+            padding: 16px 42px;
+            border-radius: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 25px rgba(0, 210, 255, 0.25);
+            margin-bottom: 55px;
+        }
+
+        .portal-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 210, 255, 0.45);
+            filter: brightness(1.1);
+        }
+
+        /* Branding Credits */
+        .brand-credits {
+            margin-top: 30px;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copyright-text {
+            color: #475569;
+            font-size: 1.05rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .engineered-text {
+            color: #78879e;
+            font-size: 1.05rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.3px;
+        }
+
+        .lala-signature {
+            font-weight: 700;
+            background: linear-gradient(90deg, #00bfff 0%, #00ffaa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.35));
+            letter-spacing: 0.5px;
+        }
+
+        .flicker-heart {
+            color: #00ff87;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0 6px;
+            line-height: 1;
+            vertical-align: middle;
+            text-shadow: 0 0 6px #00ff87, 0 0 15px #00ff87;
+            animation: heartFlicker 4s infinite alternate;
+        }
+
+        @keyframes heartFlicker {
+            0%, 100% {
+                opacity: 1;
+                text-shadow: 0 0 6px #00ff87, 0 0 15px #00ff87;
+            }
+            41% { opacity: 1; }
+            42% {
+                opacity: 0.3;
+                text-shadow: 0 0 1px rgba(0, 255, 135, 0.1);
+            }
+            43% {
+                opacity: 0.8;
+                text-shadow: 0 0 8px #00ff87;
+            }
+            44% {
+                opacity: 0.15;
+                text-shadow: none;
+            }
+            46% {
+                opacity: 1;
+                text-shadow: 0 0 6px #00ff87, 0 0 12px #00ff87;
+            }
+            85% { opacity: 1; }
+            87% { opacity: 0.5; }
+            88% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .organizers-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .logo-text { font-size: 2.3rem; }
+            .copyright-text, .engineered-text { font-size: 0.95rem; }
+            body { padding: 40px 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .organizers-grid { grid-template-columns: 1fr; }
+            .clause-header { padding: 20px 24px; font-size: 1rem; }
+            .clause-content { padding: 20px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo-text">Samal Rout Cup ®</div>
+        <div class="badge">Rules & Regulations</div>
+        <div class="date-info">[September - 2026] <strong>Sunday 27TH September, 2026</strong></div>
+    </header>
+
+    <div class="welcome-msg">
+        <strong>Dear Esteemed Participants,</strong><br>
+        We would like to remind all esteemed participating teams and players of the following comprehensive and rigorous rules and guidelines for the upcoming cricket tournament:
+    </div>
+
+    <!-- Accordion Rules Engine Area -->
+    <div class="clauses-container">
+
+        <!-- Clause 1 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 1: Standard ICC T20I Regulations</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">The official ICC T20I rules and match guidelines will be strictly and meticulously followed throughout the entirety of the tournament.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 2 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 2: Finality of Umpire Decisions</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">The decisions made by the match umpires are final, absolute, and binding. No arguments or disputes against an umpire's call will be tolerated.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 3 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 3: Sledging and Player Conduct</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Major sledging, taunting, or the use of abusive language is strictly prohibited. Proper decorum and high standards of sportsmanship are expected from all contestants.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 4 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 4: Zero Tolerance for Profanity</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">The use of offensive or vulgar language is completely banned. The tournament aims to maintain a dignified, respectful, and family-friendly environment for all players and spectators.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 5 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 5: Exclusion of Leg Byes and LBWs</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">To establish an equitable and simplified playing field, there will be no leg byes or LBW (Leg Before Wicket) dismissals applicable in this tournament.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 6 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 6: Boundary Scoring Restrictions</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Boundaries on the sides will count for standard 4 and 6 runs.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">However, no automatic 4 runs will be awarded for shots hit directly behind the wicketkeeper and the point area.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 3</span>
+                        <span class="part-text">In these specific zones, batsmen must physically run between the wickets to score.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 7 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 7: Innings Time Limits</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">A maximum time limit, as officially communicated by the organizers, is allocated to complete a single innings of play.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Strict adherence to this limit ensures optimal time management, tournament scheduling, and equal playing opportunities for all competing sides.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 8 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 8: Equipment & Match Ball Protocols</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Every team is required to bring their own playing kit and gear to ensure fair competition. Voluntarily sharing kits demonstrates commendable sportsmanship and will be rewarded with Fair Play points.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Teams do not need to bring match balls, as they will be supplied for all fixtures. However, practice balls will not be provided by the organizers.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 3</span>
+                        <span class="part-text">If a ball is lost during active match play, a suitable replacement ball will be provided by the tournament organizers.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 9 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 9: Bowling Restrictions & Delivery Protocols</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Pace bowling in any form is strictly banned. Full pace-chucking is prohibited; only spin-chucking is permissible. Round-arm bowling actions are not allowed under any circumstances.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Batsmen are permitted to make a formal, genuine appeal to the match umpire regarding a bowler's delivery pace or illegal bowling action.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 3</span>
+                        <span class="part-text">All bowling actions must uphold the highest ethical standards, fair play, and integrity of the game.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 10 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 10: Team Composition & Auction Protocols</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Each team must consist of the exact squad size specified and mandated by the tournament organizers.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">A total of 2 or 3 teams will participate in the tournament.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 3</span>
+                        <span class="part-text">Final team rosters, grouping, and player assignments will be determined exclusively through an official auction process.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 11 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 11: Umpire Surveillance & Bowling Legality</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Both the main umpire and the leg umpire will continuously monitor the bowling actions of all players throughout the match.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">This dual-umpire oversight ensures strict compliance with tournament guidelines, guaranteeing absolute fairness and delivery legality at all times.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 12 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 12: Lone Batsman Regulation</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">The last remaining batsman is permitted to continue batting alone once all other wickets have fallen.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">This provision ensures consistent team participation and allows the batting side to maximize its innings.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 13 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 13: Non-Refundable Registration Policy</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">No registration refunds will be issued if a match is called off, interrupted, or abandoned due to unforeseen circumstances or adverse conditions.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">This policy is strictly enforced to maintain organizational accountability and cover pre-allocated event logistics.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 14 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 14: Batsman Arrival & Timed-Out Protocol</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Incoming batsmen must be ready to take strike at the crease within one (1) minute of the previous batsman being dismissed.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Strict enforcement of this timer ensures the smooth, efficient, and continuous progression of the match without unnecessary delays.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 15 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 15: Disqualification & Substitution Restrictions</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Any player caught engaging in cheating, unfair practices, or severe behavioral misconduct will be instantly banned from the tournament by the organizers.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Banned or absent players cannot be replaced or substituted by a new player under any circumstances.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 16 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 16: Dangerous Bowling & Beamer Sanctions</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">If a bowler delivers two (2) waist-high full-toss no-balls (beamers) during a match, they will be immediately suspended from bowling for the remainder of that game.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">This enforcement strictly adheres to official ICC regulations regarding dangerous and unfair bowling.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 17 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 17: Innings Over Quotas & Bowler Restrictions</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Each team will bowl a designated total of specified overs per match as determined and announced by tournament organizers.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Under no circumstances is any individual bowler permitted to exceed their strict per-match over limit.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 18 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 18: On-Field Altercations & Inning Suspension</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">If any player is found engaging in a physical or verbal fight with another player, they will be instantly banned from participating for the remainder of that active innings.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">This immediate sanction is strictly enforced to uphold match safety, de-escalate conflict, and maintain order on the field.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 19 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 19: Crease Discipline & Run-Out Regulations</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">If either the striker or the non-striker leaves their respective crease before the ball is declared dead, the fielding team retains the full right to dismiss the player via a run-out.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Batters must maintain strict crease discipline and ensure the ball is officially deemed dead by the umpire before stepping outside the crease.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 20 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 20: Non-Striker Run-Out (Mankading) Legality</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Running out the non-striker while backing up too far before the ball is bowled (commonly known as "Mankading") is fully legal, permitted, and recognized as a legitimate dismissal.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">This procedure strictly adheres to the updated ICC playing regulations. No prior warning to the non-striking batter is required before the fielding side executes the dismissal.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 21 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 21: On-Field Player Limits & Bench Substitutions</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">Only the exact number of active fielders designated by the organizers will take the field during a bowling innings (comprising 1 bowler, 1 wicketkeeper, and the specified outfielders).</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">Additional squad members must remain on the team bench and may only be utilized as substitutes for fatigued or injured fielders in accordance with tournament specifications.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 22 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 22: Match Start Delays & Penalty Run Protocol</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">To ensure strict time management, a penalty of one (1) run per minute will be applied against any team responsible for delaying the scheduled start of a match.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">These penalty runs will be credited directly to the opposing team to discourage preventable delays and maintain the tournament timetable.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clause 23 -->
+        <div class="clause-item">
+            <button class="clause-header">
+                <span class="clause-title">Clause - 23: Match Timings & Grace Period Enforcement</span>
+                <span class="icon-toggle">+</span>
+            </button>
+            <div class="clause-panel">
+                <div class="clause-content">
+                    <div class="part-row">
+                        <span class="part-label">Part - 1</span>
+                        <span class="part-text">The official scheduled start time for all tournament matches is set for 06:15 AM.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 2</span>
+                        <span class="part-text">A strict grace period is provided up until 07:00 AM to allow for final pitch inspection and team preparation.</span>
+                    </div>
+                    <div class="part-row">
+                        <span class="part-label">Part - 3</span>
+                        <span class="part-text">If match commencement is delayed even one minute past 07:00 AM, run penalties will immediately begin accumulating as outlined in Clause 22.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Mandatory Attire Note -->
+    <div class="mandatory-note">
+        <strong>Mandatory Attire Note:</strong> Full team jersey, proper trousers, and standard sports shoes are strictly mandatory to take the field.
+    </div>
+
+    <!-- Executive Committee -->
+    <div class="organizers-section">
+        <div class="organizers-title">Tournament Executive Committee</div>
+        <div class="organizers-grid">
+            
+            <div class="organizer-card">
+                <div class="org-avatar">L</div>
+                <div class="org-name">Lala Bhai</div>
+                <div class="org-role">Organiser</div>
+            </div>
+
+            <div class="organizer-card">
+                <div class="org-avatar">A</div>
+                <div class="org-name">Asmit</div>
+                <div class="org-role">Organiser</div>
+            </div>
+
+            <div class="organizer-card">
+                <div class="org-avatar">S</div>
+                <div class="org-name">Subu</div>
+                <div class="org-role">Organiser</div>
+            </div>
+
+            <div class="organizer-card">
+                <div class="org-avatar">R</div>
+                <div class="org-name">Rishu</div>
+                <div class="org-role">Organiser</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="disclaimer-box">
+        <h4>Official Disclaimer</h4>
+        All match venues, dates, timings, rules, and other critical structural decisions—including the management of unforeseen environmental or logistical circumstances—are solely at the discretion of the tournament organizers.
+    </div>
+
+    <footer>
+        <p>Hope everyone will understand the rules thoroughly and display exceptional sportsmanship.</p>
+        <a href="https://tiger-0824.github.io/src_official_server/" target="_blank" class="portal-btn">Visit Official SRC Portal</a>
+        
+        <div class="brand-credits">
+            <div class="copyright-text">© 2026 SRC. All Rights Reserved.</div>
+            <div class="engineered-text">Website Engineered with <span class="flicker-heart">♥</span> by <span class="lala-signature">LALA</span></div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const accordionHeaders = document.querySelectorAll(".clause-header");
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener("click", function () {
+                const item = this.parentElement;
+                const panel = item.querySelector(".clause-panel");
+                
+                item.classList.toggle("active");
+
+                if (item.classList.contains("active")) {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } else {
+                    panel.style.maxHeight = "0px";
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
