@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAMAL–ROUT CUP | CODE – 08 OFFICIAL DOSSIER</title>
-  <meta name="description" content="Official Season 08 auction dossier, complete player register, and squad rosters for the Samal–Rout Cup.">
+  <meta name="description" content="Official Season 08 auction dossier, descending player register by selling price, and squad rosters for the Samal–Rout Cup.">
   <meta name="theme-color" content="#05070B">
   
   <!-- Open Graph Meta Tags -->
@@ -23,7 +23,7 @@
 
   <style>
     /* ==========================================================================
-       1. ROOT COLOR SYSTEM & VARIABLES (CYBER OBSIDIAN / ELECTRIC CYAN & CRIMSON)
+       1. ROOT COLOR SYSTEM & VARIABLES
        ========================================================================== */
     :root {
       --bg-dark: #05070B;
@@ -113,7 +113,6 @@
       padding: 0 24px;
     }
 
-    /* Top Scroll Progress Line */
     #scroll-progress {
       position: fixed;
       top: 0;
@@ -126,7 +125,6 @@
       transition: width 0.1s linear;
     }
 
-    /* Matrix Overlay */
     .bg-grid-overlay {
       position: fixed;
       top: 0;
@@ -650,7 +648,7 @@
     }
 
     /* ==========================================================================
-       6. AUCTION RESULTS ACTION BUTTON (LIGHTBOX STORY TRIGGER)
+       6. AUCTION RESULTS ACTION BUTTON
        ========================================================================== */
     .auction-results-banner-wrap {
       width: 100%;
@@ -788,7 +786,7 @@
     }
 
     /* ==========================================================================
-       7. FULL-SCREEN LIGHTBOX MODAL (STORY VIEWER STYLE - 9:16)
+       7. LIGHTBOX MODAL (9:16)
        ========================================================================== */
     .lightbox-modal {
       position: fixed;
@@ -1161,7 +1159,7 @@
     }
 
     /* ==========================================================================
-       11. THE TWO HOUSES (BOTH TEAMS WITH FULL 9 SQUAD SLOTS)
+       11. THE TWO HOUSES (BALANCED & ALIGNED SQUADS)
        ========================================================================== */
     .both-teams-container {
       display: grid;
@@ -1174,7 +1172,7 @@
       background: var(--bg-card);
       border: 1px solid var(--card-border);
       border-radius: 6px;
-      padding: 36px 28px;
+      padding: 34px 28px;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -1191,7 +1189,6 @@
       height: 4px;
     }
 
-    /* House 01: Legions XI (Crimson) */
     .team-house-panel.team-legions::before {
       background: linear-gradient(90deg, var(--crimson-bright), var(--crimson));
     }
@@ -1208,7 +1205,6 @@
       border: 1px solid var(--crimson-border);
     }
 
-    /* House 02: Ganapati Stars (Electric Cyan) */
     .team-house-panel.team-ganapati::before {
       background: linear-gradient(90deg, var(--cyan-dark), var(--cyan-bright));
     }
@@ -1267,7 +1263,7 @@
       border: 1px solid var(--card-border);
       border-radius: 4px;
       padding: 12px 14px;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .quick-stat-box {
@@ -1306,7 +1302,7 @@
     .squad-roster-list {
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 8px;
     }
 
     .roster-slot-row {
@@ -1316,7 +1312,7 @@
       padding: 10px 14px;
       background: var(--bg-surface);
       border: 1px solid var(--card-border);
-      border-radius: 3px;
+      border-radius: 4px;
       transition: var(--transition-smooth);
     }
 
@@ -1329,36 +1325,49 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      flex: 1;
+      min-width: 0;
     }
 
     .slot-id {
       font-family: var(--font-display);
       font-size: 0.85rem;
       font-weight: 800;
-      min-width: 26px;
+      min-width: 24px;
       color: var(--text-muted);
+      text-align: center;
+    }
+
+    .slot-player-identity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .slot-role-name {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--text-main);
     }
 
     .slot-status-pill {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       letter-spacing: 1.5px;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 2px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-family: var(--font-display);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      margin-left: 12px;
     }
 
     .roster-slot-row.captain-slot {
-      background: rgba(15, 20, 32, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.22);
     }
 
     .team-legions .roster-slot-row.captain-slot {
@@ -1381,14 +1390,20 @@
       color: #FFD700;
     }
 
-    .regular-slot .slot-status-pill {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text-muted);
+    .team-legions .regular-slot .slot-status-pill {
+      background: rgba(255, 42, 95, 0.08);
+      border: 1px solid rgba(255, 42, 95, 0.25);
+      color: var(--crimson-bright);
+    }
+
+    .team-ganapati .regular-slot .slot-status-pill {
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      color: var(--cyan-bright);
     }
 
     /* ==========================================================================
-       12. ALL PLAYERS REGISTER SECTION (4-COLUMN TABLE)
+       12. ALL PLAYERS REGISTER (PRECISE ALIGNMENT & DESCENDING PRICE ORDER)
        ========================================================================== */
     .players-register-wrapper {
       background: var(--bg-card);
@@ -1453,7 +1468,7 @@
       font-size: 0.82rem;
       letter-spacing: 1px;
       outline: none;
-      width: 240px;
+      width: 250px;
       max-width: 100%;
       transition: var(--transition-smooth);
     }
@@ -1463,46 +1478,72 @@
       box-shadow: 0 0 12px var(--cyan-glow);
     }
 
-    /* Table Component */
     .register-table-scroll {
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       border-radius: 4px;
+      border: 1px solid var(--card-border);
     }
 
     .register-table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      min-width: 600px;
+      border-collapse: collapse;
+      min-width: 640px;
+    }
+
+    /* Fixed Column Alignment System */
+    .register-table th,
+    .register-table td {
+      vertical-align: middle;
+      padding: 14px 20px;
     }
 
     .register-table th {
-      background: var(--bg-surface);
+      background: #0B101B;
       color: var(--cyan);
       font-family: var(--font-display);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 16px 20px;
-      text-align: left;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 2px solid var(--cyan-border);
       white-space: nowrap;
     }
 
-    .register-table th:first-child { width: 90px; }
-    .register-table th:nth-child(3) { width: 170px; text-align: right; }
-    .register-table th:last-child { width: 220px; text-align: right; }
+    /* Col 1: Number (Rank) */
+    .register-table th.th-num,
+    .register-table td.col-num {
+      width: 80px;
+      text-align: center;
+    }
+
+    /* Col 2: Player Name */
+    .register-table th.th-player,
+    .register-table td.col-player {
+      text-align: left;
+    }
+
+    /* Col 3: Sold Price */
+    .register-table th.th-price,
+    .register-table td.col-price {
+      width: 180px;
+      text-align: right;
+      padding-right: 28px;
+    }
+
+    /* Col 4: Sold To */
+    .register-table th.th-team,
+    .register-table td.col-team {
+      width: 220px;
+      text-align: right;
+      padding-right: 24px;
+    }
 
     .register-table td {
-      padding: 16px 20px;
-      font-size: 0.88rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       background: var(--bg-card);
-      transition: background 0.25s ease;
-      vertical-align: middle;
+      transition: background 0.2s ease;
     }
 
     .register-table tr:hover td {
@@ -1513,48 +1554,66 @@
       font-family: var(--font-display);
       font-weight: 800;
       font-size: 0.95rem;
-      color: var(--text-muted);
+      color: var(--cyan);
+      font-variant-numeric: tabular-nums;
     }
 
     .col-player {
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 1.5px;
       color: var(--text-main);
       text-transform: uppercase;
     }
 
-    .col-player .player-role-badge {
-      font-size: 0.68rem;
+    .player-name-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge-role-pill {
+      font-size: 0.65rem;
       letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-weight: 800;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .badge-captain {
+      background: rgba(255, 215, 0, 0.15);
+      border: 1px solid rgba(255, 215, 0, 0.4);
       color: #FFD700;
-      margin-left: 6px;
+    }
+
+    .badge-vc {
+      background: rgba(0, 240, 255, 0.12);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan-bright);
     }
 
     .col-price {
-      text-align: right;
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--cyan-bright);
       letter-spacing: 1px;
+      font-variant-numeric: tabular-nums;
     }
 
-    .col-team {
-      text-align: right;
-    }
-
-    /* Team Badges in Table */
     .team-sold-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 4px 14px;
+      justify-content: center;
+      padding: 5px 14px;
       border-radius: 50px;
       font-family: var(--font-display);
       font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .team-sold-badge.badge-legions {
@@ -1567,12 +1626,6 @@
       background: rgba(0, 240, 255, 0.12);
       border: 1px solid var(--cyan-border);
       color: var(--cyan-bright);
-    }
-
-    .team-sold-badge.badge-unassigned {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text-muted);
     }
 
     /* ==========================================================================
@@ -2399,7 +2452,6 @@
       <div class="hero-light-sweep"></div>
 
       <div class="container hero-content">
-        <!-- Tournament Logo -->
         <div class="hero-logo-wrap">
           <img src="logo.png" alt="Samal–Rout Cup Logo" class="hero-logo" onerror="this.style.display='none'">
         </div>
@@ -2419,7 +2471,6 @@
           <span>20:00 IST</span>
         </div>
 
-        <!-- Micro Info -->
         <div class="hero-micro-info">
           <span class="hero-micro-item">02 TEAMS</span>
           <span class="hero-micro-sep">•</span>
@@ -2430,7 +2481,6 @@
           <span class="hero-micro-item">08 PICKS</span>
         </div>
 
-        <!-- WhatsApp CTA -->
         <div class="hero-cta-group">
           <a href="https://chat.whatsapp.com/" target="_blank" rel="noopener noreferrer" class="btn-broadcast-primary">
             <span>ENTER THE AUCTION ROOM</span>
@@ -2442,12 +2492,11 @@
     </section>
 
     <!-- ==========================================================================
-         2. AUCTION RESULTS ACTION BUTTON (TRIGGER FOR 9:16 POSTER LIGHTBOX)
+         2. AUCTION RESULTS ACTION BUTTON (9:16 POSTER LIGHTBOX TRIGGER)
          ========================================================================== -->
     <section class="container auction-results-banner-wrap">
       <button type="button" class="btn-auction-results-action" id="open-poster-btn" aria-label="Open Auction Results Poster">
         <div class="results-btn-left">
-          <!-- 9:16 Miniature Thumbnail Preview referencing auction.png -->
           <div class="results-thumb-box">
             <img src="auction.png" alt="Auction Results Preview" onerror="this.style.display='none'; document.getElementById('thumb-fallback').style.display='flex';">
             <div id="thumb-fallback" class="results-thumb-fallback" style="display: none;">
@@ -2490,7 +2539,6 @@
           <div class="intro-watermark-08">08</div>
         </div>
 
-        <!-- Event Statistics -->
         <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-number" data-target="2">0</div>
@@ -2565,18 +2613,17 @@
     </section>
 
     <!-- ==========================================================================
-         5. THE TWO HOUSES (BOTH TEAMS WITH FULL 9 SQUAD SLOTS)
+         5. THE TWO HOUSES (SQUADS WITH PERFECT ALIGNMENT)
          ========================================================================== -->
     <section class="section-wrap" id="teams">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">FRANCHISE CONTENDERS</span>
           <h2 class="section-title">THE TWO HOUSES</h2>
-          <p class="section-subtitle">BOTH OFFICIAL SQUAD LISTS • 9 SLOTS PER TEAM</p>
+          <p class="section-subtitle">OFFICIAL SQUAD ROSTERS • 9 PLAYERS PER TEAM</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
-        <!-- BOTH TEAMS DISPLAYED SIDE-BY-SIDE -->
         <div class="both-teams-container">
           
           <!-- HOUSE 01: LEGIONS XI -->
@@ -2588,104 +2635,126 @@
 
             <h3 class="team-name-title">LEGIONS XI</h3>
 
-            <!-- Quick Specs -->
             <div class="team-quick-stats">
               <div class="quick-stat-box">
                 <div class="quick-stat-label">CAPTAIN</div>
-                <div class="quick-stat-val" style="color: var(--crimson-bright);">PRE-SELECTED</div>
+                <div class="quick-stat-val" style="color: var(--crimson-bright);">SUBU</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">WAR CHEST</div>
-                <div class="quick-stat-val">2000 PTS</div>
+                <div class="quick-stat-label">TOTAL SPENT</div>
+                <div class="quick-stat-val" style="color: var(--crimson-bright);">2000 PTS</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">SQUAD GOAL</div>
-                <div class="quick-stat-val">09 PLAYERS</div>
+                <div class="quick-stat-label">SQUAD STATUS</div>
+                <div class="quick-stat-val">9 / 9 FULL</div>
               </div>
             </div>
 
-            <!-- Complete 9-Man Roster List -->
             <div class="squad-roster-title">
-              <span>OFFICIAL SQUAD ROSTER</span>
-              <span style="font-size: 0.72rem; color: var(--crimson-bright);">09 POSITIONS</span>
+              <span>CONFIRMED SQUAD ROSTER</span>
+              <span style="font-size: 0.72rem; color: var(--crimson-bright);">2000 / 2000 PURSE</span>
             </div>
 
             <div class="squad-roster-list">
-              <!-- Slot 01: Captain -->
+              <!-- 01: Subu (Captain) -->
               <div class="roster-slot-row captain-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">01</span>
-                  <div>
-                    <div class="slot-role-name">👑 CAPTAIN</div>
-                    <div style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 1px;">PRE-SELECTED ANCHOR</div>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">SUBU</span>
+                    <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">0 POINTS</span>
+                <span class="slot-status-pill">0 PTS</span>
               </div>
 
-              <!-- Slots 02 - 09: 8 Auction Picks -->
+              <!-- 02: Lala (Vice Captain) -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">02</span>
-                  <span class="slot-role-name">AUCTION PICK 01</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">LALA</span>
+                    <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">610 PTS</span>
               </div>
 
+              <!-- 03: Asmit -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">03</span>
-                  <span class="slot-role-name">AUCTION PICK 02</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">ASMIT</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">800 PTS</span>
               </div>
 
+              <!-- 04: Om -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">04</span>
-                  <span class="slot-role-name">AUCTION PICK 03</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">OM</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">300 PTS</span>
               </div>
 
+              <!-- 05: Horo -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">05</span>
-                  <span class="slot-role-name">AUCTION PICK 04</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">HORO</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">160 PTS</span>
               </div>
 
+              <!-- 06: Riku -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">06</span>
-                  <span class="slot-role-name">AUCTION PICK 05</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">RIKU</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">100 PTS</span>
               </div>
 
+              <!-- 07: Nisi -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">07</span>
-                  <span class="slot-role-name">AUCTION PICK 06</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">NISI</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">10 PTS</span>
               </div>
 
+              <!-- 08: Chandan -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">08</span>
-                  <span class="slot-role-name">AUCTION PICK 07</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">CHANDAN</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">10 PTS</span>
               </div>
 
+              <!-- 09: Shreyash -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">09</span>
-                  <span class="slot-role-name">AUCTION PICK 08</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">SHREYASH</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">10 PTS</span>
               </div>
             </div>
           </div>
@@ -2699,104 +2768,126 @@
 
             <h3 class="team-name-title">GANAPATI STARS</h3>
 
-            <!-- Quick Specs -->
             <div class="team-quick-stats">
               <div class="quick-stat-box">
                 <div class="quick-stat-label">CAPTAIN</div>
-                <div class="quick-stat-val" style="color: var(--cyan-bright);">PRE-SELECTED</div>
+                <div class="quick-stat-val" style="color: var(--cyan-bright);">SAI</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">WAR CHEST</div>
-                <div class="quick-stat-val">2000 PTS</div>
+                <div class="quick-stat-label">TOTAL SPENT</div>
+                <div class="quick-stat-val" style="color: var(--cyan-bright);">1600 PTS</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">SQUAD GOAL</div>
-                <div class="quick-stat-val">09 PLAYERS</div>
+                <div class="quick-stat-label">SQUAD STATUS</div>
+                <div class="quick-stat-val">9 / 9 FULL</div>
               </div>
             </div>
 
-            <!-- Complete 9-Man Roster List -->
             <div class="squad-roster-title">
-              <span>OFFICIAL SQUAD ROSTER</span>
-              <span style="font-size: 0.72rem; color: var(--cyan-bright);">09 POSITIONS</span>
+              <span>CONFIRMED SQUAD ROSTER</span>
+              <span style="font-size: 0.72rem; color: var(--cyan-bright);">1600 / 2000 PURSE</span>
             </div>
 
             <div class="squad-roster-list">
-              <!-- Slot 01: Captain -->
+              <!-- 01: Sai (Captain) -->
               <div class="roster-slot-row captain-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">01</span>
-                  <div>
-                    <div class="slot-role-name">👑 CAPTAIN</div>
-                    <div style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 1px;">PRE-SELECTED ANCHOR</div>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">SAI</span>
+                    <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">0 POINTS</span>
+                <span class="slot-status-pill">0 PTS</span>
               </div>
 
-              <!-- Slots 02 - 09: 8 Auction Picks -->
+              <!-- 02: Babuma (Vice Captain) -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">02</span>
-                  <span class="slot-role-name">AUCTION PICK 01</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">BABUMA</span>
+                    <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">1010 PTS</span>
               </div>
 
+              <!-- 03: Jaddu -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">03</span>
-                  <span class="slot-role-name">AUCTION PICK 02</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">JADDU</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">250 PTS</span>
               </div>
 
+              <!-- 04: Suryansh -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">04</span>
-                  <span class="slot-role-name">AUCTION PICK 03</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">SURYANSH</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">110 PTS</span>
               </div>
 
+              <!-- 05: Rudra -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">05</span>
-                  <span class="slot-role-name">AUCTION PICK 04</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">RUDRA</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">100 PTS</span>
               </div>
 
+              <!-- 06: Gourav -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">06</span>
-                  <span class="slot-role-name">AUCTION PICK 05</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">GOURAV</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">100 PTS</span>
               </div>
 
+              <!-- 07: Yash -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">07</span>
-                  <span class="slot-role-name">AUCTION PICK 06</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">YASH</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">10 PTS</span>
               </div>
 
+              <!-- 08: Rohit -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">08</span>
-                  <span class="slot-role-name">AUCTION PICK 07</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">ROHIT</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">10 PTS</span>
               </div>
 
+              <!-- 09: Pappu -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">09</span>
-                  <span class="slot-role-name">AUCTION PICK 08</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">PAPPU</span>
+                  </div>
                 </div>
-                <span class="slot-status-pill">OPEN POOL</span>
+                <span class="slot-status-pill">10 PTS</span>
               </div>
             </div>
           </div>
@@ -2806,14 +2897,14 @@
     </section>
 
     <!-- ==========================================================================
-         6. ALL PLAYERS REGISTER (4-COLUMN AUCTION LEDGER)
+         6. ALL PLAYERS REGISTER (SORTED IN DESCENDING ORDER OF SELLING PRICE)
          ========================================================================== -->
     <section class="section-wrap" id="players-register" style="background: rgba(9, 13, 21, 0.5);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">OFFICIAL AUCTION RECORD</span>
           <h2 class="section-title">ALL PLAYERS REGISTER</h2>
-          <p class="section-subtitle">NUMBER • NAME • SOLD PRICE • ACQUIRED TEAM</p>
+          <p class="section-subtitle">ORDERED BY SELLING PRICE (HIGHEST TO LOWEST)</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
@@ -2822,45 +2913,276 @@
           <div class="register-toolbar">
             <div class="filter-tabs">
               <button type="button" class="filter-tab-btn active" data-filter="all">ALL PLAYERS (18)</button>
-              <button type="button" class="filter-tab-btn" data-filter="legions">LEGIONS XI</button>
-              <button type="button" class="filter-tab-btn" data-filter="ganapati">GANAPATI STARS</button>
+              <button type="button" class="filter-tab-btn" data-filter="legions">LEGIONS XI (9)</button>
+              <button type="button" class="filter-tab-btn" data-filter="ganapati">GANAPATI STARS (9)</button>
             </div>
             <div>
               <input type="text" id="player-search-input" class="search-box-input" placeholder="Search player or team..." aria-label="Search players">
             </div>
           </div>
 
-          <!-- Responsive 4-Column Table -->
+          <!-- Aligned 4-Column Table Sorted in Descending Order of Price -->
           <div class="register-table-scroll">
             <table class="register-table" id="player-records-table">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>PLAYER NAME</th>
-                  <th>SOLD PRICE</th>
-                  <th>SOLD TO</th>
+                  <th class="th-num">#</th>
+                  <th class="th-player">PLAYER NAME</th>
+                  <th class="th-price">SOLD PRICE</th>
+                  <th class="th-team">SOLD TO</th>
                 </tr>
               </thead>
               <tbody id="player-rows-body">
-                <!-- 01 Legions Captain -->
-                <tr data-team="legions">
+                
+                <!-- Rank 01: 1010 PTS -->
+                <tr data-team="ganapati">
                   <td class="col-num">01</td>
                   <td class="col-player">
-                    <span>CAPTAIN (LEGIONS XI)</span>
-                    <span class="player-role-badge">👑 PRE-SELECTED</span>
+                    <div class="player-name-wrapper">
+                      <span>BABUMA</span>
+                      <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                    </div>
                   </td>
-                  <td class="col-price">0 PTS</td>
+                  <td class="col-price">1010 PTS</td>
                   <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
                   </td>
                 </tr>
 
-                <!-- 02 Ganapati Captain -->
-                <tr data-team="ganapati">
+                <!-- Rank 02: 800 PTS -->
+                <tr data-team="legions">
                   <td class="col-num">02</td>
                   <td class="col-player">
-                    <span>CAPTAIN (GANAPATI STARS)</span>
-                    <span class="player-role-badge">👑 PRE-SELECTED</span>
+                    <div class="player-name-wrapper">
+                      <span>ASMIT</span>
+                    </div>
+                  </td>
+                  <td class="col-price">800 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 03: 610 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">03</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>LALA</span>
+                      <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                    </div>
+                  </td>
+                  <td class="col-price">610 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 04: 300 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">04</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>OM</span>
+                    </div>
+                  </td>
+                  <td class="col-price">300 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 05: 250 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">05</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>JADDU</span>
+                    </div>
+                  </td>
+                  <td class="col-price">250 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 06: 160 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">06</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>HORO</span>
+                    </div>
+                  </td>
+                  <td class="col-price">160 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 07: 110 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">07</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>SURYANSH</span>
+                    </div>
+                  </td>
+                  <td class="col-price">110 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 08: 100 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">08</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>RIKU</span>
+                    </div>
+                  </td>
+                  <td class="col-price">100 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 09: 100 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">09</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>RUDRA</span>
+                    </div>
+                  </td>
+                  <td class="col-price">100 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 10: 100 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">10</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>GOURAV</span>
+                    </div>
+                  </td>
+                  <td class="col-price">100 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 11: 10 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">11</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>NISI</span>
+                    </div>
+                  </td>
+                  <td class="col-price">10 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 12: 10 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">12</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>CHANDAN</span>
+                    </div>
+                  </td>
+                  <td class="col-price">10 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 13: 10 PTS -->
+                <tr data-team="legions">
+                  <td class="col-num">13</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>SHREYASH</span>
+                    </div>
+                  </td>
+                  <td class="col-price">10 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 14: 10 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">14</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>YASH</span>
+                    </div>
+                  </td>
+                  <td class="col-price">10 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 15: 10 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">15</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>ROHIT</span>
+                    </div>
+                  </td>
+                  <td class="col-price">10 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 16: 10 PTS -->
+                <tr data-team="ganapati">
+                  <td class="col-num">16</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>PAPPU</span>
+                    </div>
+                  </td>
+                  <td class="col-price">10 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 17: 0 PTS (Captain) -->
+                <tr data-team="legions">
+                  <td class="col-num">17</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>SUBU</span>
+                      <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
+                    </div>
+                  </td>
+                  <td class="col-price">0 PTS</td>
+                  <td class="col-team">
+                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                  </td>
+                </tr>
+
+                <!-- Rank 18: 0 PTS (Captain) -->
+                <tr data-team="ganapati">
+                  <td class="col-num">18</td>
+                  <td class="col-player">
+                    <div class="player-name-wrapper">
+                      <span>SAI</span>
+                      <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
+                    </div>
                   </td>
                   <td class="col-price">0 PTS</td>
                   <td class="col-team">
@@ -2868,165 +3190,6 @@
                   </td>
                 </tr>
 
-                <!-- 03 -->
-                <tr data-team="legions">
-                  <td class="col-num">03</td>
-                  <td class="col-player">AUCTION PLAYER 01</td>
-                  <td class="col-price">280 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 04 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">04</td>
-                  <td class="col-player">AUCTION PLAYER 02</td>
-                  <td class="col-price">340 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 05 -->
-                <tr data-team="legions">
-                  <td class="col-num">05</td>
-                  <td class="col-player">AUCTION PLAYER 03</td>
-                  <td class="col-price">210 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 06 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">06</td>
-                  <td class="col-player">AUCTION PLAYER 04</td>
-                  <td class="col-price">190 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 07 -->
-                <tr data-team="legions">
-                  <td class="col-num">07</td>
-                  <td class="col-player">AUCTION PLAYER 05</td>
-                  <td class="col-price">310 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 08 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">08</td>
-                  <td class="col-player">AUCTION PLAYER 06</td>
-                  <td class="col-price">250 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 09 -->
-                <tr data-team="legions">
-                  <td class="col-num">09</td>
-                  <td class="col-player">AUCTION PLAYER 07</td>
-                  <td class="col-price">240 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 10 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">10</td>
-                  <td class="col-player">AUCTION PLAYER 08</td>
-                  <td class="col-price">220 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 11 -->
-                <tr data-team="legions">
-                  <td class="col-num">11</td>
-                  <td class="col-player">AUCTION PLAYER 09</td>
-                  <td class="col-price">260 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 12 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">12</td>
-                  <td class="col-player">AUCTION PLAYER 10</td>
-                  <td class="col-price">270 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 13 -->
-                <tr data-team="legions">
-                  <td class="col-num">13</td>
-                  <td class="col-player">AUCTION PLAYER 11</td>
-                  <td class="col-price">180 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 14 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">14</td>
-                  <td class="col-player">AUCTION PLAYER 12</td>
-                  <td class="col-price">290 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 15 -->
-                <tr data-team="legions">
-                  <td class="col-num">15</td>
-                  <td class="col-player">AUCTION PLAYER 13</td>
-                  <td class="col-price">220 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 16 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">16</td>
-                  <td class="col-player">AUCTION PLAYER 14</td>
-                  <td class="col-price">210 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
-
-                <!-- 17 -->
-                <tr data-team="legions">
-                  <td class="col-num">17</td>
-                  <td class="col-player">AUCTION PLAYER 15</td>
-                  <td class="col-price">250 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
-                </tr>
-
-                <!-- 18 -->
-                <tr data-team="ganapati">
-                  <td class="col-num">18</td>
-                  <td class="col-player">AUCTION PLAYER 16</td>
-                  <td class="col-price">230 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -3035,7 +3198,7 @@
     </section>
 
     <!-- ==========================================================================
-         7. "THE WAR CHEST" (PURSE SYSTEM)
+         7. "THE WAR CHEST" (PURSE BREAKDOWN)
          ========================================================================== -->
     <section class="section-wrap" id="war-chest">
       <div class="container">
@@ -3051,14 +3214,14 @@
             <div class="warchest-team-name">LEGIONS XI</div>
             <div class="warchest-divider-bar" style="background: var(--crimson);"></div>
             <div class="warchest-points">2000</div>
-            <div class="warchest-points-sub">STARTING AUCTION POINTS</div>
+            <div class="warchest-points-sub">STARTING AUCTION POINTS (2000 SPENT)</div>
           </div>
 
           <div class="warchest-card">
             <div class="warchest-team-name">GANAPATI STARS</div>
             <div class="warchest-divider-bar"></div>
             <div class="warchest-points">2000</div>
-            <div class="warchest-points-sub">STARTING AUCTION POINTS</div>
+            <div class="warchest-points-sub">STARTING AUCTION POINTS (1600 SPENT)</div>
           </div>
         </div>
 
@@ -3445,21 +3608,17 @@
   <button id="back-to-top" aria-label="Back to top">↑</button>
 
   <!-- ==========================================================================
-       16. FULL-SCREEN LIGHTBOX MODAL (STORY VIEWER STYLE - 9:16)
-           Points to auction.png
+       16. FULL-SCREEN LIGHTBOX MODAL (9:16)
        ========================================================================== -->
   <div class="lightbox-modal" id="poster-lightbox" role="dialog" aria-modal="true" aria-label="Auction Results Poster">
-    <!-- Close Button -->
     <button class="lightbox-close-btn" id="close-poster-btn" aria-label="Close modal">
       <span>✕</span>
       <span>CLOSE</span>
     </button>
 
-    <!-- 9:16 Aspect Ratio Card -->
     <div class="story-viewer-card" id="story-card">
       <img src="auction.png" alt="Samal–Rout Cup Code-08 Official Auction Results" onerror="this.style.display='none'; document.getElementById('story-fallback-full').style.display='flex';">
       
-      <!-- High-res CSS Fallback Story Graphic if auction.png is not loaded -->
       <div class="poster-story-fallback" id="story-fallback-full" style="display: none;">
         <div class="story-fallback-header">
           <div class="sub">SAMAL–ROUT CUP • SEASON 08</div>
