@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAMAL–ROUT CUP | CODE – 08 OFFICIAL DOSSIER</title>
-  <meta name="description" content="Official Season 08 auction dossier, descending player register by selling price, and squad rosters for the Samal–Rout Cup.">
-  <meta name="theme-color" content="#05070B">
+  <title>SAMAL–ROUT CUP | ASTRA 09 OFFICIAL AUCTION PORTAL</title>
+  <meta name="description" content="Astra 09 — Tejas, Tattva, Triumph: The Ninth Awakening. The official Diwali battlefield auction portal for Samal–Rout Cup Season 09.">
+  <meta name="theme-color" content="#050406">
   
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="SAMAL–ROUT CUP | CODE – 08 AUCTION & PLAYER REGISTER">
-  <meta property="og:description" content="Official Season 08 Auction Information, Player Register & Squad Rosters.">
+  <meta property="og:title" content="SAMAL–ROUT CUP | ASTRA 09">
+  <meta property="og:description" content="Tejas, Tattva, Triumph: The Ninth Awakening. Real Madrid vs Panda XI.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="logo.png">
 
@@ -19,36 +19,49 @@
   <!-- Google Fonts: Cinzel & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       1. ROOT COLOR SYSTEM & VARIABLES
+       1. HIGH-CONTRAST DIWALI × BATTLEFIELD × ROYAL ARENA PALETTE
        ========================================================================== */
     :root {
-      --bg-dark: #05070B;
-      --bg-surface: #090D15;
-      --bg-card: #0F1420;
-      --bg-card-elevated: #151D2E;
+      /* Deep High-Contrast Obsidian Backgrounds */
+      --bg-dark: #050406;
+      --bg-surface: #0B080E;
+      --bg-card: #120D16;
+      --bg-card-elevated: #1B1320;
       
-      /* Primary High-Tech Broadcast Accents */
-      --cyan: #00F0FF;
-      --cyan-bright: #70F7FF;
-      --cyan-dark: #008B99;
-      --cyan-glow: rgba(0, 240, 255, 0.28);
-      --cyan-border: rgba(0, 240, 255, 0.35);
+      /* Luminous Solar Gold */
+      --gold: #FFD700;
+      --gold-bright: #FFF176;
+      --gold-dark: #B8860B;
+      --gold-glow: rgba(255, 215, 0, 0.45);
+      --gold-border: rgba(255, 215, 0, 0.55);
+      --gold-border-soft: rgba(255, 215, 0, 0.25);
 
-      /* Rivalry Accent: Crimson / Ruby */
-      --crimson: #FF2A5F;
-      --crimson-bright: #FF668B;
-      --crimson-glow: rgba(255, 42, 95, 0.32);
-      --crimson-border: rgba(255, 42, 95, 0.4);
+      /* Electric Diwali Saffron Flame */
+      --saffron: #FF6600;
+      --saffron-bright: #FF9100;
+      --saffron-glow: rgba(255, 102, 0, 0.45);
+      --saffron-border: rgba(255, 145, 0, 0.6);
 
-      /* Neutral Palette */
-      --text-main: #F8FAFC;
-      --text-muted: #94A3B8;
-      --text-dim: #475569;
-      --card-border: rgba(255, 255, 255, 0.08);
+      /* Imperial Battlefield Ruby / Vermilion */
+      --crimson: #E0102A;
+      --crimson-bright: #FF2E4D;
+      --crimson-glow: rgba(255, 23, 68, 0.45);
+      --crimson-border: rgba(255, 46, 77, 0.6);
+
+      /* Royal Border Trim */
+      --border-trim: rgba(255, 215, 0, 0.3);
+      --border-glow: 0 0 15px rgba(255, 145, 0, 0.25);
+
+      /* Ultra-Readable Text */
+      --text-main: #FFFFFF;
+      --text-bright: #FFF9E6;
+      --text-muted: #D1C2A5;
+      --text-dim: #94826B;
+      --card-border: rgba(255, 215, 0, 0.22);
 
       --font-display: 'Cinzel', serif;
       --font-body: 'Inter', sans-serif;
@@ -77,9 +90,10 @@
     body {
       background-color: var(--bg-dark);
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 55%),
-        radial-gradient(circle at 100% 40%, rgba(255, 42, 95, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 0% 70%, rgba(0, 240, 255, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 50% 0%, rgba(255, 110, 0, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 90% 25%, rgba(224, 16, 42, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 10% 70%, rgba(255, 215, 0, 0.14) 0%, transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(255, 102, 0, 0.15) 0%, transparent 60%);
       background-attachment: fixed;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -113,18 +127,20 @@
       padding: 0 24px;
     }
 
+    /* Radiant Solar Energy Scroll Line */
     #scroll-progress {
       position: fixed;
       top: 0;
       left: 0;
-      height: 3px;
+      height: 3.5px;
       width: 0%;
-      background: linear-gradient(90deg, var(--crimson), var(--cyan));
+      background: linear-gradient(90deg, var(--crimson-bright), var(--saffron), var(--gold-bright));
       z-index: 99999;
-      box-shadow: 0 0 12px var(--cyan);
+      box-shadow: 0 0 16px var(--saffron-bright), 0 0 8px var(--gold-bright);
       transition: width 0.1s linear;
     }
 
+    /* Geometric Overlay */
     .bg-grid-overlay {
       position: fixed;
       top: 0;
@@ -132,20 +148,38 @@
       width: 100vw;
       height: 100vh;
       background-image: 
-        linear-gradient(rgba(0, 240, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.025) 1px, transparent 1px);
-      background-size: 55px 55px;
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px, 60px 60px, 60px 60px;
       pointer-events: none;
       z-index: 0;
     }
 
+    /* Ambient Floating Embers */
+    .ember-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: radial-gradient(circle, rgba(255, 145, 0, 0.4) 1px, transparent 1.5px);
+      background-size: 110px 110px;
+      opacity: 0.5;
+      animation: floatEmbers 18s linear infinite;
+    }
+
+    @keyframes floatEmbers {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-110px); }
+    }
+
     /* ==========================================================================
-       3. PRELOADER
+       3. PRELOADER — INCANDESCENT DIYA
        ========================================================================== */
     #preloader {
       position: fixed;
       inset: 0;
-      background: var(--bg-dark);
+      background: #040305;
       z-index: 100000;
       display: flex;
       flex-direction: column;
@@ -165,45 +199,73 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
     }
 
     .preloader-sub {
       font-family: var(--font-display);
-      font-size: 0.85rem;
-      letter-spacing: 6px;
-      color: var(--text-muted);
+      font-size: 0.88rem;
+      letter-spacing: 8px;
+      color: var(--saffron-bright);
       text-transform: uppercase;
+      font-weight: 700;
       margin-bottom: 6px;
+      text-shadow: 0 0 12px var(--saffron-glow);
+    }
+
+    .preloader-diya {
+      font-size: 2.2rem;
+      color: var(--gold-bright);
+      filter: drop-shadow(0 0 25px var(--saffron));
+      margin-bottom: 4px;
+      animation: diyaFlicker 1.8s infinite ease-in-out;
+    }
+
+    @keyframes diyaFlicker {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 22px var(--saffron)); }
+      50% { transform: scale(1.15); filter: drop-shadow(0 0 35px var(--gold-bright)); }
     }
 
     .preloader-num {
       font-family: var(--font-display);
-      font-size: 5rem;
+      font-size: 5.5rem;
       font-weight: 900;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 40%, var(--saffron-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 35px var(--cyan-glow);
+      text-shadow: 0 0 40px var(--gold-glow);
       letter-spacing: 4px;
     }
 
     .preloader-title {
       font-family: var(--font-display);
-      font-size: 1.15rem;
-      letter-spacing: 12px;
-      color: var(--text-main);
+      font-size: 1.35rem;
+      letter-spacing: 14px;
+      color: #FFFFFF;
       margin-top: 4px;
-      font-weight: 700;
+      font-weight: 900;
+      text-shadow: 0 0 20px var(--gold-glow);
+    }
+
+    .preloader-tagline {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 10px;
     }
 
     .preloader-progress-track {
-      width: 190px;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.1);
-      margin-top: 30px;
+      width: 220px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.12);
+      margin-top: 28px;
       position: relative;
       overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
 
     .preloader-progress-bar {
@@ -212,8 +274,8 @@
       top: 0;
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, var(--crimson), var(--cyan));
-      box-shadow: 0 0 10px var(--cyan);
+      background: linear-gradient(90deg, var(--crimson-bright), var(--saffron-bright), var(--gold-bright));
+      box-shadow: 0 0 14px var(--gold-bright);
       animation: progressLoad 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     }
 
@@ -223,7 +285,7 @@
     }
 
     /* ==========================================================================
-       4. NAVBAR
+       4. NAVBAR — RADIANT TRANSLUCENT GLASS
        ========================================================================== */
     .navbar {
       position: fixed;
@@ -240,11 +302,12 @@
     }
 
     .navbar.scrolled {
-      background: rgba(5, 7, 11, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--card-border);
-      height: 70px;
+      background: rgba(5, 4, 6, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--gold-border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 20px rgba(255, 215, 0, 0.15);
+      height: 72px;
     }
 
     .nav-container {
@@ -261,18 +324,19 @@
     }
 
     .nav-logo {
-      height: 38px;
+      height: 40px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 10px var(--cyan-glow));
+      filter: drop-shadow(0 0 12px var(--gold-glow));
     }
 
     .nav-brand-text {
       font-family: var(--font-display);
-      font-size: 1rem;
-      letter-spacing: 2px;
-      font-weight: 800;
-      color: var(--text-main);
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      font-weight: 900;
+      color: var(--gold-bright);
+      text-shadow: 0 0 15px var(--gold-glow);
     }
 
     .nav-links {
@@ -282,8 +346,8 @@
     }
 
     .nav-link {
-      font-size: 0.8rem;
-      font-weight: 600;
+      font-size: 0.82rem;
+      font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -299,13 +363,15 @@
       left: 50%;
       width: 0;
       height: 2px;
-      background: var(--cyan);
+      background: linear-gradient(90deg, var(--gold-bright), var(--saffron-bright));
+      box-shadow: 0 0 8px var(--saffron-bright);
       transition: var(--transition-smooth);
       transform: translateX(-50%);
     }
 
     .nav-link:hover {
-      color: var(--cyan);
+      color: #FFFFFF;
+      text-shadow: 0 0 10px var(--gold-glow);
     }
 
     .nav-link:hover::after {
@@ -313,25 +379,26 @@
     }
 
     .nav-btn {
-      padding: 9px 22px;
-      font-size: 0.78rem;
-      letter-spacing: 2px;
+      padding: 10px 24px;
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      font-weight: 700;
-      color: var(--cyan);
-      background: rgba(0, 240, 255, 0.06);
-      border: 1px solid var(--cyan-border);
-      border-radius: 2px;
+      font-weight: 800;
+      color: #050406;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      border: 1px solid var(--gold-bright);
+      border-radius: 3px;
       transition: var(--transition-smooth);
+      box-shadow: 0 0 18px var(--gold-glow);
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
 
     .nav-btn:hover {
-      background: var(--cyan);
-      color: var(--bg-dark);
-      box-shadow: 0 0 20px var(--cyan-glow);
+      background: linear-gradient(135deg, #FFFFFF, var(--gold-bright));
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.75);
+      transform: translateY(-2px);
     }
 
     .mobile-toggle {
@@ -349,7 +416,8 @@
       display: block;
       width: 100%;
       height: 2px;
-      background: var(--cyan);
+      background: var(--gold-bright);
+      box-shadow: 0 0 8px var(--gold-glow);
       position: absolute;
       left: 0;
       transition: var(--transition-smooth);
@@ -374,8 +442,8 @@
     .mobile-menu {
       position: fixed;
       inset: 0;
-      background: rgba(5, 7, 11, 0.98);
-      backdrop-filter: blur(24px);
+      background: rgba(5, 4, 6, 0.98);
+      backdrop-filter: blur(25px);
       z-index: 1001;
       display: flex;
       flex-direction: column;
@@ -384,6 +452,7 @@
       gap: 24px;
       transform: translateX(100%);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-left: 2px solid var(--gold-border);
     }
 
     .mobile-menu.open {
@@ -391,12 +460,13 @@
     }
 
     .mobile-menu .nav-link {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       letter-spacing: 4px;
+      color: #FFFFFF;
     }
 
     /* ==========================================================================
-       5. HERO SECTION
+       5. HERO SECTION — HIGH IMPACT BATTLEFIELD VISUALS
        ========================================================================== */
     .hero-section {
       position: relative;
@@ -419,7 +489,7 @@
       font-size: clamp(18rem, 42vw, 36rem);
       font-weight: 900;
       color: transparent;
-      -webkit-text-stroke: 1.5px rgba(0, 240, 255, 0.08);
+      -webkit-text-stroke: 2px rgba(255, 215, 0, 0.12);
       user-select: none;
       pointer-events: none;
       line-height: 1;
@@ -434,19 +504,19 @@
 
     .hero-light-sweep {
       position: absolute;
-      top: 30%;
+      top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 750px;
-      height: 380px;
-      background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.12) 0%, rgba(255, 42, 95, 0.06) 45%, transparent 70%);
+      width: 800px;
+      height: 420px;
+      background: radial-gradient(ellipse at center, rgba(255, 110, 0, 0.22) 0%, rgba(224, 16, 42, 0.15) 45%, transparent 70%);
       pointer-events: none;
       z-index: -1;
-      filter: blur(60px);
+      filter: blur(65px);
     }
 
     .hero-content {
-      max-width: 880px;
+      max-width: 940px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -455,103 +525,125 @@
     }
 
     .hero-logo-wrap {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       display: inline-block;
+      position: relative;
     }
 
     .hero-logo {
-      width: 90px;
+      width: 95px;
       height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 20px var(--cyan-glow));
+      filter: drop-shadow(0 0 25px var(--gold-glow));
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 6px 18px;
-      border: 1px solid var(--card-border);
-      background: rgba(15, 20, 32, 0.7);
+      padding: 7px 22px;
+      border: 1px solid var(--gold-border);
+      background: rgba(18, 13, 22, 0.85);
       border-radius: 50px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 20px rgba(255, 145, 0, 0.25);
     }
 
     .hero-badge-dot {
       width: 8px;
       height: 8px;
-      background: var(--cyan);
+      background: var(--gold-bright);
       border-radius: 50%;
-      box-shadow: 0 0 10px var(--cyan);
-      animation: pulseDot 2s infinite ease-in-out;
+      box-shadow: 0 0 12px var(--gold-bright);
+      animation: pulseDot 1.8s infinite ease-in-out;
     }
 
     @keyframes pulseDot {
-      0%, 100% { opacity: 0.4; transform: scale(0.85); }
-      50% { opacity: 1; transform: scale(1.3); }
+      0%, 100% { opacity: 0.5; transform: scale(0.85); }
+      50% { opacity: 1; transform: scale(1.35); box-shadow: 0 0 16px var(--saffron-bright); }
     }
 
     .hero-badge-text {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--text-muted);
-      font-weight: 700;
+      color: #FFFFFF;
+      font-weight: 800;
     }
 
     .hero-title-sub {
       font-family: var(--font-display);
-      font-size: clamp(0.9rem, 2.4vw, 1.35rem);
-      letter-spacing: 8px;
+      font-size: clamp(0.92rem, 2.4vw, 1.35rem);
+      letter-spacing: 9px;
       text-transform: uppercase;
-      color: var(--cyan);
+      color: var(--saffron-bright);
       margin-bottom: 8px;
+      text-shadow: 0 0 16px var(--saffron-glow);
+      font-weight: 700;
     }
 
     .hero-title-main {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 8.5vw, 5.8rem);
+      font-size: clamp(3.4rem, 9.5vw, 6.6rem);
       font-weight: 900;
       letter-spacing: 6px;
       text-transform: uppercase;
       line-height: 1.05;
-      background: linear-gradient(180deg, #FFFFFF 0%, #D8E5F3 40%, var(--cyan) 85%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 35%, var(--saffron-bright) 70%, var(--crimson-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 4px 25px rgba(255, 145, 0, 0.45));
     }
 
-    .hero-dossier {
+    .hero-tagline-box {
+      margin-bottom: 26px;
+    }
+
+    .hero-tagline-main {
       font-family: var(--font-display);
-      font-size: clamp(0.85rem, 2vw, 1.15rem);
-      letter-spacing: 6px;
+      font-size: clamp(1rem, 2.6vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--text-main);
-      opacity: 0.85;
-      margin-bottom: 24px;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .hero-tagline-sub {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      letter-spacing: 6px;
+      color: var(--saffron-bright);
+      text-transform: uppercase;
+      font-weight: 800;
+      text-shadow: 0 0 12px var(--saffron-glow);
     }
 
     .hero-date-banner {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      padding: 10px 26px;
-      background: rgba(9, 13, 21, 0.85);
-      border-top: 1px solid var(--cyan-border);
-      border-bottom: 1px solid var(--cyan-border);
+      gap: 16px;
+      padding: 12px 32px;
+      background: rgba(11, 8, 14, 0.95);
+      border-top: 1.5px solid var(--gold);
+      border-bottom: 1.5px solid var(--gold);
       margin-bottom: 30px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
     }
 
     .hero-date-banner span {
-      font-size: 0.9rem;
-      font-weight: 700;
+      font-size: 0.95rem;
+      font-weight: 800;
       letter-spacing: 3px;
-      color: var(--cyan-bright);
+      color: var(--gold-bright);
       text-transform: uppercase;
+      text-shadow: 0 0 10px var(--gold-glow);
     }
 
     .hero-date-banner .sep {
-      color: var(--crimson);
+      color: var(--saffron-bright);
     }
 
     .hero-micro-info {
@@ -559,25 +651,26 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px 20px;
+      gap: 12px 22px;
       margin-bottom: 36px;
-      padding: 12px 24px;
-      background: rgba(15, 20, 32, 0.6);
-      border: 1px solid var(--card-border);
-      border-radius: 4px;
+      padding: 14px 28px;
+      background: rgba(18, 13, 22, 0.85);
+      border: 1px solid var(--gold-border);
+      border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
 
     .hero-micro-item {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       letter-spacing: 2px;
-      font-weight: 700;
-      color: var(--text-main);
+      font-weight: 800;
+      color: #FFFFFF;
       text-transform: uppercase;
     }
 
     .hero-micro-sep {
-      color: var(--cyan);
-      opacity: 0.6;
+      color: var(--gold-bright);
+      opacity: 0.7;
     }
 
     .hero-cta-group {
@@ -593,21 +686,21 @@
       align-items: center;
       justify-content: center;
       gap: 14px;
-      padding: 18px 46px;
-      background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(15, 20, 32, 0.9) 100%);
-      border: 1px solid var(--cyan);
-      border-radius: 2px;
+      padding: 20px 52px;
+      background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold) 50%, var(--saffron) 100%);
+      border: 1px solid #FFFFFF;
+      border-radius: 3px;
       font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 3px;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
-      color: var(--cyan-bright);
+      color: #050406;
       cursor: pointer;
       position: relative;
       overflow: hidden;
       transition: var(--transition-smooth);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 35px var(--gold-glow), 0 8px 30px rgba(0, 0, 0, 0.8);
     }
 
     .btn-broadcast-primary::before {
@@ -617,15 +710,14 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
       transition: 0.6s ease;
     }
 
     .btn-broadcast-primary:hover {
-      background: var(--cyan);
-      color: var(--bg-dark);
-      box-shadow: 0 0 30px var(--cyan-glow);
-      transform: translateY(-2px);
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-bright) 100%);
+      box-shadow: 0 0 50px rgba(255, 215, 0, 0.85);
+      transform: translateY(-3px);
     }
 
     .btn-broadcast-primary:hover::before {
@@ -637,18 +729,19 @@
     }
 
     .btn-broadcast-primary:hover .btn-arrow {
-      transform: translateX(5px);
+      transform: translateX(6px);
     }
 
     .cta-subtext {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--text-muted);
+      font-weight: 700;
     }
 
     /* ==========================================================================
-       6. AUCTION RESULTS ACTION BUTTON
+       6. AUCTION RESULTS ACTION BUTTON — GOLD & SAFFRON STRIP
        ========================================================================== */
     .auction-results-banner-wrap {
       width: 100%;
@@ -657,10 +750,10 @@
 
     .btn-auction-results-action {
       width: 100%;
-      background: linear-gradient(90deg, rgba(15, 20, 32, 0.95) 0%, rgba(21, 29, 46, 0.95) 50%, rgba(15, 20, 32, 0.95) 100%);
-      border: 1px solid var(--cyan-border);
-      border-radius: 6px;
-      padding: 16px 24px;
+      background: linear-gradient(90deg, #140E19 0%, #1E1426 50%, #140E19 100%);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 8px;
+      padding: 18px 26px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -669,7 +762,7 @@
       color: inherit;
       text-align: left;
       transition: var(--transition-smooth);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.12);
       position: relative;
       overflow: hidden;
       outline: none;
@@ -680,34 +773,34 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 4px;
+      width: 5px;
       height: 100%;
-      background: linear-gradient(180deg, var(--crimson), var(--cyan));
+      background: linear-gradient(180deg, var(--crimson-bright), var(--saffron-bright), var(--gold-bright));
     }
 
     .btn-auction-results-action:hover,
     .btn-auction-results-action:focus-visible {
-      border-color: var(--cyan);
+      border-color: var(--gold-bright);
       transform: translateY(-2px);
-      box-shadow: 0 12px 35px var(--cyan-glow);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 35px var(--gold-glow);
     }
 
     .results-btn-left {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 22px;
     }
 
     .results-thumb-box {
-      width: 48px;
-      height: 85px;
+      width: 50px;
+      height: 88px;
       border-radius: 4px;
-      border: 1px solid var(--cyan-border);
+      border: 1.5px solid var(--gold);
       background: #000;
       overflow: hidden;
       flex-shrink: 0;
       position: relative;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 12px var(--gold-glow);
     }
 
     .results-thumb-box img {
@@ -723,66 +816,70 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(180deg, #101624 0%, #06080F 100%);
-      font-size: 0.48rem;
+      background: linear-gradient(180deg, #1F1528 0%, #08050B 100%);
+      font-size: 0.52rem;
       letter-spacing: 1px;
-      color: var(--cyan);
+      color: var(--gold-bright);
       text-align: center;
       padding: 4px;
+      font-weight: 800;
     }
 
     .results-btn-meta h3 {
       font-family: var(--font-display);
-      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
-      font-weight: 800;
+      font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+      font-weight: 900;
       letter-spacing: 3px;
-      color: var(--text-main);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       gap: 12px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
 
     .results-badge-live {
-      font-size: 0.65rem;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-      padding: 2px 9px;
-      background: rgba(255, 42, 95, 0.15);
-      border: 1px solid var(--crimson-border);
-      color: var(--crimson-bright);
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+      padding: 3px 10px;
+      background: rgba(255, 102, 0, 0.2);
+      border: 1px solid var(--saffron-border);
+      color: var(--saffron-bright);
       border-radius: 50px;
       text-transform: uppercase;
+      box-shadow: 0 0 10px var(--saffron-glow);
     }
 
     .results-btn-meta p {
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
       letter-spacing: 1px;
-      margin-top: 4px;
+      margin-top: 5px;
     }
 
     .results-btn-trigger-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 11px 24px;
-      background: rgba(0, 240, 255, 0.08);
-      border: 1px solid var(--cyan-border);
+      padding: 12px 26px;
+      background: rgba(255, 215, 0, 0.12);
+      border: 1.5px solid var(--gold);
       border-radius: 4px;
       font-family: var(--font-body);
-      font-size: 0.82rem;
-      letter-spacing: 2px;
-      font-weight: 700;
-      color: var(--cyan);
+      font-size: 0.84rem;
+      letter-spacing: 2.5px;
+      font-weight: 800;
+      color: var(--gold-bright);
       text-transform: uppercase;
       white-space: nowrap;
       transition: var(--transition-smooth);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
     }
 
     .btn-auction-results-action:hover .results-btn-trigger-pill {
-      background: var(--cyan);
-      color: var(--bg-dark);
-      box-shadow: 0 0 15px var(--cyan-glow);
+      background: var(--gold);
+      color: #050406;
+      box-shadow: 0 0 25px var(--gold-glow);
     }
 
     /* ==========================================================================
@@ -791,9 +888,9 @@
     .lightbox-modal {
       position: fixed;
       inset: 0;
-      background: rgba(3, 5, 8, 0.94);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      background: rgba(4, 3, 5, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       z-index: 100000;
       display: flex;
       align-items: center;
@@ -813,14 +910,14 @@
       position: absolute;
       top: 20px;
       right: 24px;
-      background: rgba(255, 42, 95, 0.15);
-      border: 1px solid var(--crimson);
+      background: rgba(224, 16, 42, 0.25);
+      border: 1.5px solid var(--crimson-bright);
       color: #FFFFFF;
       font-family: var(--font-body);
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.88rem;
+      font-weight: 800;
       letter-spacing: 2px;
-      padding: 10px 22px;
+      padding: 11px 24px;
       border-radius: 50px;
       cursor: pointer;
       display: inline-flex;
@@ -828,13 +925,12 @@
       gap: 8px;
       z-index: 100002;
       transition: var(--transition-smooth);
-      box-shadow: 0 0 15px rgba(255, 42, 95, 0.2);
+      box-shadow: 0 0 20px var(--crimson-glow);
     }
 
     .lightbox-close-btn:hover {
-      background: var(--crimson);
-      box-shadow: 0 0 25px var(--crimson-glow);
-      transform: scale(1.05);
+      background: var(--crimson-bright);
+      transform: scale(1.06);
     }
 
     .story-viewer-card {
@@ -842,11 +938,11 @@
       height: 86vh;
       max-height: 820px;
       aspect-ratio: 9 / 16;
-      background: #090D15;
-      border: 1px solid var(--cyan-border);
+      background: #0B080E;
+      border: 2px solid var(--gold);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 35px var(--cyan-glow);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 45px var(--gold-glow);
       transform: scale(0.92);
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
@@ -870,9 +966,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 36px 28px;
-      background: linear-gradient(180deg, #090D15 0%, #0F1420 50%, #05070B 100%);
-      border: 1px solid var(--card-border);
+      padding: 38px 30px;
+      background: linear-gradient(180deg, #150F1C 0%, #20142B 50%, #050406 100%);
+      border: 1px solid var(--gold-border);
       text-align: center;
       box-sizing: border-box;
       position: relative;
@@ -881,19 +977,21 @@
 
     .story-fallback-header .sub {
       font-family: var(--font-display);
-      font-size: 0.8rem;
-      letter-spacing: 5px;
-      color: var(--cyan);
+      font-size: 0.85rem;
+      letter-spacing: 6px;
+      color: var(--saffron-bright);
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     .story-fallback-header .main {
       font-family: var(--font-display);
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 900;
-      letter-spacing: 3px;
-      color: var(--text-main);
+      letter-spacing: 4px;
+      color: #FFFFFF;
       margin-top: 4px;
+      text-shadow: 0 0 15px var(--gold-glow);
     }
 
     .story-fallback-center {
@@ -903,53 +1001,54 @@
 
     .story-big-code {
       font-family: var(--font-display);
-      font-size: 4.8rem;
+      font-size: 5rem;
       font-weight: 900;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 50%, var(--saffron-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 6px;
+      filter: drop-shadow(0 0 25px var(--gold-glow));
     }
 
     .story-fallback-teams {
-      margin-top: 16px;
+      margin-top: 18px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 800;
+      font-size: 1.15rem;
+      font-weight: 900;
       letter-spacing: 3px;
     }
 
-    .story-team-1 { color: var(--crimson-bright); }
-    .story-team-vs { font-size: 0.8rem; color: var(--text-muted); }
-    .story-team-2 { color: var(--cyan-bright); }
+    .story-team-1 { color: var(--gold-bright); text-shadow: 0 0 10px var(--gold-glow); }
+    .story-team-vs { font-size: 0.82rem; color: var(--text-muted); }
+    .story-team-2 { color: var(--saffron-bright); text-shadow: 0 0 10px var(--saffron-glow); }
 
     .story-fallback-footer {
-      border-top: 1px solid var(--card-border);
-      padding-top: 18px;
+      border-top: 1px solid var(--gold-border);
+      padding-top: 20px;
     }
 
     .story-date-badge {
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       letter-spacing: 3px;
-      font-weight: 700;
-      color: var(--cyan);
+      font-weight: 800;
+      color: var(--gold-bright);
       text-transform: uppercase;
       margin-bottom: 4px;
     }
 
     .story-footnote {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       letter-spacing: 2px;
       color: var(--text-muted);
       text-transform: uppercase;
     }
 
     /* ==========================================================================
-       8. SECTION HEADINGS
+       8. SECTION HEADINGS — SHARP & BRILLIANT
        ========================================================================== */
     .section-wrap {
       padding: var(--section-spacing) 0;
@@ -964,36 +1063,41 @@
 
     .section-tag {
       font-family: var(--font-display);
-      font-size: 0.8rem;
-      letter-spacing: 6px;
-      color: var(--cyan);
+      font-size: 0.82rem;
+      letter-spacing: 7px;
+      color: var(--saffron-bright);
       text-transform: uppercase;
       display: inline-block;
       margin-bottom: 10px;
+      font-weight: 800;
+      text-shadow: 0 0 10px var(--saffron-glow);
     }
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
+      font-size: clamp(2.2rem, 5.2vw, 3.4rem);
+      font-weight: 900;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--text-main);
+      color: #FFFFFF;
       line-height: 1.2;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
     }
 
     .section-subtitle {
-      font-size: 0.95rem;
-      letter-spacing: 2.5px;
+      font-size: 0.98rem;
+      letter-spacing: 3px;
       color: var(--text-muted);
       text-transform: uppercase;
       margin-top: 10px;
+      font-weight: 600;
     }
 
     .broadcast-divider-center {
-      width: 70px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      width: 80px;
+      height: 2.5px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      box-shadow: 0 0 10px var(--gold-glow);
       margin: 20px auto 0;
     }
 
@@ -1005,12 +1109,13 @@
       grid-template-columns: 1fr auto 1.4fr;
       align-items: center;
       gap: 50px;
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
+      background: linear-gradient(135deg, #130D18 0%, #1A1121 100%);
+      border: 1.5px solid var(--gold-border);
       padding: 50px 45px;
-      border-radius: 4px;
+      border-radius: 8px;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 215, 0, 0.12);
     }
 
     .intro-grid::before {
@@ -1018,39 +1123,42 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 4px;
+      width: 5px;
       height: 100%;
-      background: linear-gradient(180deg, var(--cyan), transparent);
+      background: linear-gradient(180deg, var(--gold-bright), var(--saffron), transparent);
     }
 
     .intro-left .intro-tag {
       font-family: var(--font-display);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       letter-spacing: 4px;
-      color: var(--cyan);
+      color: var(--saffron-bright);
       text-transform: uppercase;
       margin-bottom: 8px;
+      font-weight: 800;
+      text-shadow: 0 0 8px var(--saffron-glow);
     }
 
     .intro-left .intro-heading {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-size: clamp(2rem, 3.6vw, 2.9rem);
       letter-spacing: 3px;
-      color: var(--text-main);
-      font-weight: 800;
+      color: #FFFFFF;
+      font-weight: 900;
+      text-shadow: 0 0 20px var(--gold-glow);
     }
 
     .intro-center-divider {
       width: 1px;
       height: 90px;
-      background: var(--card-border);
+      background: var(--gold-border);
     }
 
     .intro-right-desc {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      font-weight: 300;
-      line-height: 1.8;
+      font-size: 1.08rem;
+      color: #F0E6D2;
+      font-weight: 400;
+      line-height: 1.85;
       letter-spacing: 0.5px;
     }
 
@@ -1061,7 +1169,7 @@
       font-family: var(--font-display);
       font-size: 11rem;
       font-weight: 900;
-      color: rgba(0, 240, 255, 0.03);
+      color: rgba(255, 215, 0, 0.05);
       user-select: none;
       pointer-events: none;
       line-height: 1;
@@ -1070,42 +1178,44 @@
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 22px;
       margin-top: 40px;
     }
 
     .stat-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      padding: 40px 24px;
+      background: linear-gradient(180deg, #160F1D 0%, #110B17 100%);
+      border: 1.5px solid var(--gold-border);
+      padding: 42px 24px;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: var(--transition-smooth);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     }
 
     .stat-card:hover {
-      border-color: var(--cyan-border);
+      border-color: var(--gold-bright);
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--cyan-glow);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px var(--gold-glow);
     }
 
     .stat-number {
       font-family: var(--font-display);
-      font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+      font-size: clamp(2.8rem, 4.8vw, 4rem);
       font-weight: 900;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 12px;
+      filter: drop-shadow(0 0 16px var(--gold-glow));
     }
 
     .stat-label {
-      font-size: 0.78rem;
-      font-weight: 700;
+      font-size: 0.82rem;
+      font-weight: 800;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--text-main);
+      color: #FFFFFF;
     }
 
     /* ==========================================================================
@@ -1118,48 +1228,53 @@
     }
 
     .info-tile {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      padding: 30px 26px;
-      border-radius: 4px;
+      background: linear-gradient(180deg, #150E1C 0%, #0F0915 100%);
+      border: 1.5px solid var(--gold-border);
+      padding: 32px 26px;
+      border-radius: 6px;
       transition: var(--transition-smooth);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
     }
 
     .info-tile:hover {
-      border-color: var(--cyan-border);
-      background: var(--bg-card-elevated);
+      border-color: var(--gold-bright);
+      background: #1C1225;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 25px var(--gold-glow);
     }
 
     .info-tile-label {
       font-family: var(--font-display);
-      font-size: 0.75rem;
-      letter-spacing: 3px;
-      color: var(--cyan);
+      font-size: 0.78rem;
+      letter-spacing: 3.5px;
+      color: var(--saffron-bright);
       text-transform: uppercase;
       margin-bottom: 12px;
       display: block;
+      font-weight: 800;
+      text-shadow: 0 0 8px var(--saffron-glow);
     }
 
     .info-tile-value {
       font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 800;
+      font-size: 2.3rem;
+      font-weight: 900;
       letter-spacing: 2px;
-      color: var(--text-main);
+      color: #FFFFFF;
       line-height: 1.1;
       margin-bottom: 4px;
+      text-shadow: 0 0 15px var(--gold-glow);
     }
 
     .info-tile-sub {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       letter-spacing: 2px;
       color: var(--text-muted);
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     /* ==========================================================================
-       11. THE TWO HOUSES (BALANCED & ALIGNED SQUADS)
+       11. THE TWO HOUSES (REAL MADRID & PANDA XI)
        ========================================================================== */
     .both-teams-container {
       display: grid;
@@ -1169,15 +1284,16 @@
     }
 
     .team-house-panel {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      border-radius: 6px;
-      padding: 34px 28px;
+      background: linear-gradient(180deg, #150E1A 0%, #0D0812 100%);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 8px;
+      padding: 36px 30px;
       display: flex;
       flex-direction: column;
       position: relative;
       overflow: hidden;
       transition: var(--transition-smooth);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
     }
 
     .team-house-panel::before {
@@ -1186,39 +1302,35 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
+      height: 4.5px;
     }
 
-    .team-house-panel.team-legions::before {
-      background: linear-gradient(90deg, var(--crimson-bright), var(--crimson));
+    /* Real Madrid (Solar Gold & Crimson) */
+    .team-house-panel.team-madrid::before {
+      background: linear-gradient(90deg, var(--gold-bright), var(--crimson-bright));
     }
-    .team-house-panel.team-legions {
-      border-top: 1px solid var(--crimson-border);
+    .team-house-panel.team-madrid:hover {
+      border-color: var(--gold-bright);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px var(--gold-glow);
     }
-    .team-house-panel.team-legions:hover {
-      border-color: var(--crimson);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px var(--crimson-glow);
-    }
-    .team-house-panel.team-legions .team-badge {
-      color: var(--crimson-bright);
-      background: rgba(255, 42, 95, 0.08);
-      border: 1px solid var(--crimson-border);
+    .team-house-panel.team-madrid .team-badge {
+      color: #050406;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      border: 1px solid #FFFFFF;
     }
 
-    .team-house-panel.team-ganapati::before {
-      background: linear-gradient(90deg, var(--cyan-dark), var(--cyan-bright));
+    /* Panda XI (Electric Saffron & Gold) */
+    .team-house-panel.team-panda::before {
+      background: linear-gradient(90deg, var(--saffron-bright), var(--gold-bright));
     }
-    .team-house-panel.team-ganapati {
-      border-top: 1px solid var(--cyan-border);
+    .team-house-panel.team-panda:hover {
+      border-color: var(--saffron-bright);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px var(--saffron-glow);
     }
-    .team-house-panel.team-ganapati:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px var(--cyan-glow);
-    }
-    .team-house-panel.team-ganapati .team-badge {
-      color: var(--cyan-bright);
-      background: rgba(0, 240, 255, 0.08);
-      border: 1px solid var(--cyan-border);
+    .team-house-panel.team-panda .team-badge {
+      color: #050406;
+      background: linear-gradient(135deg, var(--saffron-bright), var(--saffron));
+      border: 1px solid #FFFFFF;
     }
 
     .team-header-row {
@@ -1230,39 +1342,42 @@
 
     .team-badge {
       font-family: var(--font-display);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       letter-spacing: 3px;
       text-transform: uppercase;
-      padding: 4px 14px;
-      border-radius: 2px;
-      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 3px;
+      font-weight: 900;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     }
 
     .team-code-tag {
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 900;
       letter-spacing: 2px;
-      opacity: 0.35;
+      opacity: 0.6;
+      color: var(--gold-bright);
     }
 
     .team-name-title {
       font-family: var(--font-display);
-      font-size: clamp(1.8rem, 2.8vw, 2.3rem);
-      font-weight: 800;
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      font-weight: 900;
       letter-spacing: 3px;
-      color: var(--text-main);
+      color: #FFFFFF;
       margin-bottom: 20px;
+      text-shadow: 0 0 18px rgba(255, 215, 0, 0.3);
     }
 
     .team-quick-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      background: rgba(5, 7, 11, 0.6);
-      border: 1px solid var(--card-border);
-      border-radius: 4px;
-      padding: 12px 14px;
+      gap: 12px;
+      background: rgba(10, 7, 13, 0.9);
+      border: 1px solid var(--gold-border);
+      border-radius: 6px;
+      padding: 14px 16px;
       margin-bottom: 26px;
     }
 
@@ -1271,94 +1386,98 @@
     }
 
     .quick-stat-label {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       letter-spacing: 1.5px;
       color: var(--text-muted);
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     .quick-stat-val {
       font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--text-main);
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--gold-bright);
       margin-top: 2px;
     }
 
     .squad-roster-title {
       font-family: var(--font-display);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: #FFFFFF;
       margin-bottom: 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1.5px solid var(--gold-border);
       padding-bottom: 8px;
+      font-weight: 800;
     }
 
     .squad-roster-list {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 9px;
     }
 
     .roster-slot-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 14px;
-      background: var(--bg-surface);
-      border: 1px solid var(--card-border);
+      padding: 12px 16px;
+      background: #0B080F;
+      border: 1px solid rgba(255, 215, 0, 0.22);
       border-radius: 4px;
       transition: var(--transition-smooth);
     }
 
     .roster-slot-row:hover {
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: var(--gold);
+      background: #17101F;
       transform: translateX(4px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     }
 
     .roster-slot-left {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex: 1;
       min-width: 0;
     }
 
     .slot-id {
       font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-weight: 800;
-      min-width: 24px;
-      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 900;
+      min-width: 26px;
+      color: var(--gold-bright);
       text-align: center;
     }
 
     .slot-player-identity {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .slot-role-name {
-      font-size: 0.88rem;
-      font-weight: 700;
+      font-size: 0.92rem;
+      font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--text-main);
+      color: #FFFFFF;
     }
 
     .slot-status-pill {
-      font-size: 0.75rem;
+      font-size: 0.76rem;
       letter-spacing: 1.5px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 3px;
       font-family: var(--font-display);
       font-variant-numeric: tabular-nums;
@@ -1366,51 +1485,40 @@
       margin-left: 12px;
     }
 
+    /* Distinct Captain Styling */
     .roster-slot-row.captain-slot {
-      border-color: rgba(255, 255, 255, 0.22);
-    }
-
-    .team-legions .roster-slot-row.captain-slot {
-      border-color: var(--crimson-border);
-      background: linear-gradient(90deg, rgba(255, 42, 95, 0.12) 0%, rgba(15, 20, 32, 0.9) 100%);
-    }
-
-    .team-ganapati .roster-slot-row.captain-slot {
-      border-color: var(--cyan-border);
-      background: linear-gradient(90deg, rgba(0, 240, 255, 0.12) 0%, rgba(15, 20, 32, 0.9) 100%);
+      background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, #120D16 100%);
+      border: 1.5px solid var(--gold);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
     }
 
     .captain-slot .slot-id {
-      color: #FFD700;
+      color: var(--gold-bright);
+      text-shadow: 0 0 8px var(--gold-glow);
     }
 
     .captain-slot .slot-status-pill {
-      background: rgba(255, 215, 0, 0.12);
-      border: 1px solid rgba(255, 215, 0, 0.4);
-      color: #FFD700;
+      background: rgba(255, 215, 0, 0.18);
+      border: 1px solid var(--gold);
+      color: var(--gold-bright);
+      font-weight: 900;
     }
 
-    .team-legions .regular-slot .slot-status-pill {
-      background: rgba(255, 42, 95, 0.08);
-      border: 1px solid rgba(255, 42, 95, 0.25);
-      color: var(--crimson-bright);
-    }
-
-    .team-ganapati .regular-slot .slot-status-pill {
-      background: rgba(0, 240, 255, 0.08);
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      color: var(--cyan-bright);
+    .regular-slot .slot-status-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: var(--text-muted);
     }
 
     /* ==========================================================================
-       12. ALL PLAYERS REGISTER (PRECISE ALIGNMENT & DESCENDING PRICE ORDER)
+       12. ALL PLAYERS REGISTER — HIGH-CONTRAST 4-COLUMN TABLE
        ========================================================================== */
     .players-register-wrapper {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
+      background: linear-gradient(180deg, #150E1B 0%, #0D0813 100%);
+      border: 1.5px solid var(--gold-border);
       border-radius: 8px;
       padding: 34px 28px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 215, 0, 0.12);
       position: relative;
     }
 
@@ -1422,24 +1530,24 @@
       flex-wrap: wrap;
       margin-bottom: 24px;
       padding-bottom: 20px;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1.5px solid var(--gold-border);
     }
 
     .filter-tabs {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .filter-tab-btn {
-      background: var(--bg-surface);
-      border: 1px solid var(--card-border);
+      background: #0B080F;
+      border: 1px solid var(--gold-border);
       color: var(--text-muted);
-      padding: 8px 18px;
+      padding: 9px 20px;
       border-radius: 4px;
       font-family: var(--font-body);
-      font-size: 0.78rem;
-      font-weight: 700;
+      font-size: 0.82rem;
+      font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
       cursor: pointer;
@@ -1447,84 +1555,83 @@
     }
 
     .filter-tab-btn:hover {
-      color: var(--text-main);
-      border-color: rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 12px var(--gold-glow);
     }
 
     .filter-tab-btn.active {
-      background: rgba(0, 240, 255, 0.12);
-      border-color: var(--cyan);
-      color: var(--cyan-bright);
-      box-shadow: 0 0 15px var(--cyan-glow);
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      border-color: #FFFFFF;
+      color: #050406;
+      box-shadow: 0 0 20px var(--gold-glow);
     }
 
     .search-box-input {
-      background: var(--bg-surface);
-      border: 1px solid var(--card-border);
+      background: #0B080F;
+      border: 1px solid var(--gold-border);
       border-radius: 4px;
-      padding: 9px 16px;
-      color: var(--text-main);
+      padding: 10px 18px;
+      color: #FFFFFF;
       font-family: var(--font-body);
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       letter-spacing: 1px;
       outline: none;
-      width: 250px;
+      width: 260px;
       max-width: 100%;
       transition: var(--transition-smooth);
     }
 
     .search-box-input:focus {
-      border-color: var(--cyan);
-      box-shadow: 0 0 12px var(--cyan-glow);
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 15px var(--gold-glow);
     }
 
     .register-table-scroll {
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      border-radius: 4px;
-      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      border: 1.5px solid var(--gold-border);
+      background: #0B080F;
     }
 
     .register-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 640px;
+      min-width: 650px;
     }
 
-    /* Fixed Column Alignment System */
     .register-table th,
     .register-table td {
       vertical-align: middle;
-      padding: 14px 20px;
+      padding: 15px 22px;
     }
 
     .register-table th {
-      background: #0B101B;
-      color: var(--cyan);
+      background: #140E1B;
+      color: var(--gold-bright);
       font-family: var(--font-display);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 2px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      border-bottom: 2px solid var(--cyan-border);
+      border-bottom: 2px solid var(--gold);
       white-space: nowrap;
+      text-shadow: 0 0 10px var(--gold-glow);
     }
 
-    /* Col 1: Number (Rank) */
     .register-table th.th-num,
     .register-table td.col-num {
-      width: 80px;
+      width: 85px;
       text-align: center;
     }
 
-    /* Col 2: Player Name */
     .register-table th.th-player,
     .register-table td.col-player {
       text-align: left;
     }
 
-    /* Col 3: Sold Price */
     .register-table th.th-price,
     .register-table td.col-price {
       width: 180px;
@@ -1532,100 +1639,109 @@
       padding-right: 28px;
     }
 
-    /* Col 4: Sold To */
     .register-table th.th-team,
     .register-table td.col-team {
-      width: 220px;
+      width: 230px;
       text-align: right;
       padding-right: 24px;
     }
 
     .register-table td {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      background: var(--bg-card);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      background: #0E0914;
       transition: background 0.2s ease;
     }
 
     .register-table tr:hover td {
-      background: var(--bg-card-elevated);
+      background: #1A1224;
     }
 
     .col-num {
       font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: var(--cyan);
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--gold-bright);
       font-variant-numeric: tabular-nums;
     }
 
     .col-player {
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 1.5px;
-      color: var(--text-main);
+      color: #FFFFFF;
       text-transform: uppercase;
     }
 
     .player-name-wrapper {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .badge-role-pill {
-      font-size: 0.65rem;
+      font-size: 0.68rem;
       letter-spacing: 1px;
-      padding: 3px 8px;
+      padding: 3px 9px;
       border-radius: 3px;
-      font-weight: 800;
+      font-weight: 900;
       white-space: nowrap;
       line-height: 1;
     }
 
     .badge-captain {
-      background: rgba(255, 215, 0, 0.15);
-      border: 1px solid rgba(255, 215, 0, 0.4);
-      color: #FFD700;
+      background: rgba(255, 215, 0, 0.2);
+      border: 1px solid var(--gold-bright);
+      color: var(--gold-bright);
+      box-shadow: 0 0 10px var(--gold-glow);
     }
 
-    .badge-vc {
-      background: rgba(0, 240, 255, 0.12);
-      border: 1px solid var(--cyan-border);
-      color: var(--cyan-bright);
+    .badge-pool {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
     }
 
     .col-price {
       font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.05rem;
-      color: var(--cyan-bright);
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--gold-bright);
       letter-spacing: 1px;
       font-variant-numeric: tabular-nums;
+      text-shadow: 0 0 10px var(--gold-glow);
     }
 
     .team-sold-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 50px;
       font-family: var(--font-display);
-      font-size: 0.72rem;
-      font-weight: 800;
+      font-size: 0.75rem;
+      font-weight: 900;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       white-space: nowrap;
     }
 
-    .team-sold-badge.badge-legions {
-      background: rgba(255, 42, 95, 0.12);
-      border: 1px solid var(--crimson-border);
-      color: var(--crimson-bright);
+    .team-sold-badge.badge-madrid {
+      background: rgba(255, 215, 0, 0.18);
+      border: 1.5px solid var(--gold);
+      color: var(--gold-bright);
+      box-shadow: 0 0 14px var(--gold-glow);
     }
 
-    .team-sold-badge.badge-ganapati {
-      background: rgba(0, 240, 255, 0.12);
-      border: 1px solid var(--cyan-border);
-      color: var(--cyan-bright);
+    .team-sold-badge.badge-panda {
+      background: rgba(255, 102, 0, 0.18);
+      border: 1.5px solid var(--saffron-bright);
+      color: var(--saffron-bright);
+      box-shadow: 0 0 14px var(--saffron-glow);
+    }
+
+    .team-sold-badge.badge-pool {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-muted);
     }
 
     /* ==========================================================================
@@ -1639,119 +1755,129 @@
     }
 
     .warchest-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      border-radius: 6px;
-      padding: 40px 30px;
+      background: linear-gradient(180deg, #150E1A 0%, #0E0913 100%);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 8px;
+      padding: 42px 30px;
       text-align: center;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
     }
 
     .warchest-team-name {
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       letter-spacing: 4px;
-      color: var(--text-main);
+      color: #FFFFFF;
       text-transform: uppercase;
       margin-bottom: 8px;
+      font-weight: 900;
     }
 
     .warchest-divider-bar {
-      width: 40px;
-      height: 2px;
-      background: var(--cyan);
+      width: 45px;
+      height: 2.5px;
+      background: var(--gold);
+      box-shadow: 0 0 10px var(--gold-glow);
       margin: 0 auto 20px;
     }
 
     .warchest-points {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-size: clamp(3.2rem, 6.2vw, 4.8rem);
       font-weight: 900;
       letter-spacing: 3px;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan-bright) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
+      filter: drop-shadow(0 0 20px var(--gold-glow));
     }
 
     .warchest-points-sub {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       letter-spacing: 4px;
-      color: var(--cyan);
+      color: var(--saffron-bright);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 800;
+      text-shadow: 0 0 8px var(--saffron-glow);
     }
 
     .warchest-breakdown-box {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
+      background: #0E0913;
+      border: 1.5px solid var(--gold-border);
       padding: 30px 40px;
-      border-radius: 4px;
+      border-radius: 6px;
       text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     }
 
     .breakdown-item h4 {
       font-family: var(--font-display);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       letter-spacing: 3px;
       color: var(--text-muted);
       text-transform: uppercase;
       margin-bottom: 8px;
+      font-weight: 800;
     }
 
     .breakdown-item p {
       font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--cyan-bright);
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--gold-bright);
+      text-shadow: 0 0 14px var(--gold-glow);
     }
 
     /* ==========================================================================
        14. BIDDING SYSTEM (+10 CENTERPIECE)
        ========================================================================== */
     .bid-hero-box {
-      background: var(--bg-card);
-      border: 1px solid var(--cyan-border);
-      border-radius: 6px;
+      background: linear-gradient(180deg, #150E1A 0%, #0E0913 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
       padding: 60px 40px;
       text-align: center;
       position: relative;
       margin-bottom: 30px;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), 0 10px 40px rgba(0, 0, 0, 0.8);
     }
 
     .bid-increment-giant {
       font-family: var(--font-display);
-      font-size: clamp(4.5rem, 11vw, 8rem);
+      font-size: clamp(4.8rem, 12vw, 8.5rem);
       font-weight: 900;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 45%, var(--saffron-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
-      text-shadow: 0 0 40px var(--cyan-glow);
+      filter: drop-shadow(0 0 35px var(--gold-glow));
     }
 
     .bid-increment-label {
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       letter-spacing: 6px;
-      color: var(--cyan);
+      color: var(--gold-bright);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 14px;
+      text-shadow: 0 0 12px var(--gold-glow);
     }
 
     .bid-increment-desc {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 550px;
+      font-size: 1.05rem;
+      color: #E2D4BE;
+      max-width: 560px;
       margin: 0 auto 36px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .bid-sequence-steps {
@@ -1764,26 +1890,27 @@
 
     .seq-step {
       font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      padding: 8px 16px;
-      border: 1px solid var(--card-border);
-      background: rgba(5, 7, 11, 0.7);
+      font-size: 1.15rem;
+      font-weight: 800;
+      padding: 8px 18px;
+      border: 1px solid var(--gold-border);
+      background: #08050B;
       color: var(--text-muted);
-      border-radius: 2px;
+      border-radius: 3px;
       transition: var(--transition-smooth);
     }
 
     .seq-arrow {
-      color: var(--cyan);
+      color: var(--gold-bright);
+      font-weight: 900;
     }
 
     .seq-step.active {
-      border-color: var(--cyan);
-      color: var(--cyan-bright);
-      background: rgba(0, 240, 255, 0.15);
-      box-shadow: 0 0 16px var(--cyan-glow);
-      transform: scale(1.08);
+      border-color: #FFFFFF;
+      color: #050406;
+      background: linear-gradient(135deg, var(--gold-bright), var(--saffron-bright));
+      box-shadow: 0 0 25px var(--gold-glow);
+      transform: scale(1.1);
     }
 
     .bid-limits-grid {
@@ -1793,40 +1920,44 @@
     }
 
     .limit-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      padding: 26px;
+      background: #0E0913;
+      border: 1.5px solid var(--gold-border);
+      padding: 28px;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 6px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
     }
 
     .limit-card-label {
       font-family: var(--font-display);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       letter-spacing: 3px;
       color: var(--text-muted);
       text-transform: uppercase;
       margin-bottom: 8px;
+      font-weight: 800;
     }
 
     .limit-card-val {
       font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 800;
+      font-size: 1.6rem;
+      font-weight: 900;
       letter-spacing: 2px;
-      color: var(--cyan-bright);
+      color: var(--gold-bright);
       margin-bottom: 6px;
+      text-shadow: 0 0 10px var(--gold-glow);
     }
 
     .limit-card-note {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-dim);
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     /* ==========================================================================
-       15. "THE CODEX" (10 RULES)
+       15. "THE CODEX" (AUCTION RULES)
        ========================================================================== */
     .rules-grid {
       display: grid;
@@ -1835,76 +1966,80 @@
     }
 
     .rule-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
+      background: linear-gradient(180deg, #140E19 0%, #0B070E 100%);
+      border: 1.5px solid var(--gold-border);
       padding: 28px 24px;
-      border-radius: 4px;
+      border-radius: 6px;
       display: flex;
       align-items: flex-start;
       gap: 20px;
       transition: var(--transition-smooth);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
     }
 
     .rule-card:hover {
-      border-color: var(--cyan-border);
-      background: var(--bg-card-elevated);
+      border-color: var(--gold-bright);
+      background: #1B1322;
       transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 20px var(--gold-glow);
     }
 
     .rule-number {
       font-family: var(--font-display);
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 900;
-      color: var(--cyan);
+      color: var(--gold-bright);
       line-height: 1;
-      opacity: 0.85;
-      min-width: 40px;
+      text-shadow: 0 0 12px var(--gold-glow);
+      min-width: 42px;
     }
 
     .rule-content h3 {
       font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 800;
       letter-spacing: 2px;
-      color: var(--text-main);
+      color: #FFFFFF;
       text-transform: uppercase;
       margin-bottom: 6px;
     }
 
     .rule-content p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+      font-size: 0.92rem;
+      color: #D6C8B2;
+      line-height: 1.65;
     }
 
     /* ==========================================================================
-       16. "THE SECOND CALL" (RE-ENTRY)
+       16. "THE SECOND CALL" (RE-ENTRY PROCESS)
        ========================================================================== */
     .second-call-box {
-      background: var(--bg-card);
-      border: 1px solid var(--cyan-border);
-      border-radius: 6px;
+      background: linear-gradient(180deg, #180D17 0%, #0F0811 100%);
+      border: 1.5px solid var(--crimson-border);
+      border-radius: 8px;
       padding: 50px 36px;
       text-align: center;
       position: relative;
+      box-shadow: 0 0 35px var(--crimson-glow);
     }
 
     .second-call-banner {
       font-family: var(--font-display);
-      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.4rem, 3.6vw, 2.3rem);
       font-weight: 900;
       letter-spacing: 5px;
       text-transform: uppercase;
-      color: var(--cyan-bright);
+      color: #FFFFFF;
       margin-bottom: 12px;
+      text-shadow: 0 0 20px var(--crimson-glow);
     }
 
     .second-call-desc {
-      font-size: 1rem;
-      color: var(--text-muted);
+      font-size: 1.05rem;
+      color: #E2D4BE;
       max-width: 760px;
       margin: 0 auto 40px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .flow-diagram {
@@ -1927,37 +2062,41 @@
 
     .flow-node {
       padding: 12px 24px;
-      background: var(--bg-dark);
-      border: 1px solid var(--card-border);
-      border-radius: 2px;
+      background: #08050B;
+      border: 1.5px solid var(--gold-border);
+      border-radius: 3px;
       font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.88rem;
+      font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--text-main);
+      color: #FFFFFF;
     }
 
     .flow-node.sold {
-      border-color: var(--cyan);
-      color: var(--cyan-bright);
-      background: rgba(0, 240, 255, 0.1);
+      border-color: var(--gold-bright);
+      color: #050406;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      box-shadow: 0 0 20px var(--gold-glow);
     }
 
     .flow-node.re-entry {
-      border-color: var(--crimson);
-      color: var(--crimson-bright);
-      background: rgba(255, 42, 95, 0.15);
+      border-color: var(--crimson-bright);
+      color: #FFFFFF;
+      background: rgba(224, 16, 42, 0.25);
+      box-shadow: 0 0 18px var(--crimson-glow);
     }
 
     .flow-arrow-h {
-      color: var(--cyan);
+      color: var(--gold-bright);
+      font-weight: 900;
     }
 
     .flow-arrow-v {
-      color: var(--cyan-bright);
-      font-size: 1.2rem;
+      color: var(--saffron-bright);
+      font-size: 1.3rem;
       margin: -4px 0;
+      text-shadow: 0 0 10px var(--saffron-glow);
     }
 
     /* ==========================================================================
@@ -1971,37 +2110,39 @@
     }
 
     .timeline-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
+      background: linear-gradient(180deg, #150E1A 0%, #0B070E 100%);
+      border: 1.5px solid var(--gold-border);
       padding: 24px 14px;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: var(--transition-smooth);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
 
     .timeline-card:hover,
     .timeline-card.illuminated {
-      border-color: var(--cyan);
-      background: var(--bg-card-elevated);
-      box-shadow: 0 0 20px var(--cyan-glow);
+      border-color: var(--gold-bright);
+      background: #1C1224;
+      box-shadow: 0 0 25px var(--gold-glow);
       transform: translateY(-4px);
     }
 
     .timeline-step-num {
       font-family: var(--font-display);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       letter-spacing: 3px;
-      color: var(--cyan);
+      color: var(--saffron-bright);
       margin-bottom: 8px;
-      font-weight: 700;
+      font-weight: 800;
+      text-shadow: 0 0 8px var(--saffron-glow);
     }
 
     .timeline-step-title {
       font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.88rem;
+      font-weight: 800;
       letter-spacing: 1.5px;
-      color: var(--text-main);
+      color: #FFFFFF;
       text-transform: uppercase;
       line-height: 1.4;
     }
@@ -2016,71 +2157,75 @@
     }
 
     .architect-card {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
-      padding: 40px 20px;
+      background: linear-gradient(180deg, #150E1A 0%, #0B070E 100%);
+      border: 1.5px solid var(--gold-border);
+      padding: 42px 20px;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: var(--transition-smooth);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     }
 
     .architect-card:hover {
-      border-color: var(--cyan);
+      border-color: var(--gold-bright);
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--cyan-glow);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--gold-glow);
     }
 
     .architect-monogram {
-      width: 64px;
-      height: 64px;
+      width: 66px;
+      height: 66px;
       margin: 0 auto 20px;
-      border: 1px solid var(--cyan-border);
+      border: 1.5px solid var(--gold-bright);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 800;
+      font-size: 1.25rem;
+      font-weight: 900;
       letter-spacing: 2px;
-      color: var(--cyan-bright);
-      background: rgba(0, 240, 255, 0.05);
-      border-radius: 4px;
+      color: var(--gold-bright);
+      background: rgba(255, 215, 0, 0.12);
+      border-radius: 6px;
+      box-shadow: 0 0 18px var(--gold-glow);
     }
 
     .architect-num {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       letter-spacing: 3px;
       color: var(--text-dim);
       margin-bottom: 6px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .architect-name {
       font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 800;
+      font-size: 1.2rem;
+      font-weight: 900;
       letter-spacing: 2px;
-      color: var(--text-main);
+      color: #FFFFFF;
       text-transform: uppercase;
       margin-bottom: 6px;
     }
 
     .architect-role {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       letter-spacing: 3px;
       color: var(--text-muted);
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     /* ==========================================================================
        19. COUNTDOWN CHRONOMETER
        ========================================================================== */
     .countdown-wrapper {
-      background: var(--bg-card);
-      border: 1px solid var(--cyan-border);
-      border-radius: 6px;
+      background: linear-gradient(180deg, #150E1A 0%, #0B070E 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
       padding: 60px 30px;
       text-align: center;
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.2), 0 10px 40px rgba(0, 0, 0, 0.8);
     }
 
     .countdown-grid {
@@ -2093,30 +2238,32 @@
     }
 
     .countdown-box {
-      min-width: 120px;
-      background: var(--bg-dark);
-      border: 1px solid var(--card-border);
+      min-width: 125px;
+      background: #08050B;
+      border: 1.5px solid var(--gold-border);
       padding: 24px 18px;
-      border-radius: 4px;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
 
     .countdown-number {
       font-family: var(--font-display);
-      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      font-size: clamp(2.6rem, 5.2vw, 4rem);
       font-weight: 900;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan-bright) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 8px;
+      filter: drop-shadow(0 0 15px var(--gold-glow));
     }
 
     .countdown-lbl {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       letter-spacing: 3px;
       color: var(--text-muted);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .countdown-live-msg {
@@ -2125,7 +2272,7 @@
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 900;
       letter-spacing: 6px;
-      color: var(--cyan-bright);
+      color: var(--gold-bright);
       text-transform: uppercase;
       animation: pulseDot 2s infinite ease-in-out;
       margin-top: 20px;
@@ -2135,9 +2282,9 @@
        20. MAJOR JOIN CTA
        ========================================================================== */
     .join-section {
-      background: var(--bg-surface);
-      border-top: 1px solid var(--card-border);
-      border-bottom: 1px solid var(--card-border);
+      background: linear-gradient(180deg, #0B080E 0%, #150E1A 100%);
+      border-top: 1.5px solid var(--gold-border);
+      border-bottom: 1.5px solid var(--gold-border);
       padding: 100px 24px;
       text-align: center;
       position: relative;
@@ -2153,7 +2300,7 @@
       font-size: clamp(16rem, 36vw, 30rem);
       font-weight: 900;
       color: transparent;
-      -webkit-text-stroke: 1.5px rgba(0, 240, 255, 0.05);
+      -webkit-text-stroke: 2px rgba(255, 215, 0, 0.08);
       user-select: none;
       pointer-events: none;
       line-height: 1;
@@ -2172,24 +2319,24 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
-      padding: 22px 54px;
+      padding: 22px 56px;
       font-family: var(--font-display);
-      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-      font-weight: 800;
+      font-size: clamp(1rem, 2.6vw, 1.25rem);
+      font-weight: 900;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--bg-dark);
-      background: linear-gradient(135deg, var(--cyan-bright) 0%, var(--cyan) 100%);
-      border: 1px solid var(--cyan-bright);
+      color: #050406;
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-bright) 40%, var(--saffron-bright) 100%);
+      border: 1.5px solid #FFFFFF;
       border-radius: 4px;
       cursor: pointer;
       transition: var(--transition-smooth);
-      box-shadow: 0 0 35px var(--cyan-glow);
+      box-shadow: 0 0 45px var(--gold-glow), 0 10px 30px rgba(0, 0, 0, 0.8);
       margin-top: 36px;
     }
 
     .join-btn-large:hover {
-      box-shadow: 0 0 55px rgba(0, 240, 255, 0.6);
+      box-shadow: 0 0 65px rgba(255, 215, 0, 0.9);
       transform: translateY(-3px) scale(1.02);
     }
 
@@ -2204,63 +2351,79 @@
 
     .final-statement {
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       letter-spacing: 6px;
       color: var(--text-muted);
       text-transform: uppercase;
       margin-bottom: 16px;
+      font-weight: 700;
     }
 
     .final-giant-08 {
       font-family: var(--font-display);
-      font-size: clamp(5rem, 14vw, 9rem);
+      font-size: clamp(5.2rem, 15vw, 9.5rem);
       font-weight: 900;
       line-height: 1;
-      background: linear-gradient(180deg, #FFFFFF 0%, var(--cyan) 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-bright) 45%, var(--saffron-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
+      filter: drop-shadow(0 0 30px var(--gold-glow));
     }
 
     .final-cup-title {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       letter-spacing: 8px;
-      color: var(--text-main);
-      font-weight: 700;
+      color: #FFFFFF;
+      font-weight: 800;
       text-transform: uppercase;
       margin-bottom: 4px;
     }
 
     .final-season {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       letter-spacing: 5px;
-      color: var(--cyan);
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .final-tagline-text {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      letter-spacing: 3.5px;
+      color: var(--saffron-bright);
       text-transform: uppercase;
       margin-bottom: 24px;
+      font-weight: 800;
+      text-shadow: 0 0 10px var(--saffron-glow);
     }
 
     .final-line {
-      width: 100px;
-      height: 1px;
-      background: var(--cyan);
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      box-shadow: 0 0 10px var(--gold-glow);
       margin: 0 auto 24px;
     }
 
     .final-closing {
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       letter-spacing: 6px;
       color: var(--text-muted);
       text-transform: uppercase;
+      font-weight: 600;
     }
 
     .site-footer {
-      background: #020306;
-      border-top: 1px solid var(--card-border);
+      background: #040305;
+      border-top: 1.5px solid var(--gold-border);
       padding: 40px 24px;
       text-align: center;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       letter-spacing: 2px;
       color: var(--text-dim);
       text-transform: uppercase;
@@ -2269,17 +2432,18 @@
 
     .site-footer span {
       color: var(--text-muted);
+      font-weight: 700;
     }
 
     #back-to-top {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      width: 44px;
-      height: 44px;
-      background: rgba(15, 20, 32, 0.9);
-      border: 1px solid var(--cyan-border);
-      color: var(--cyan);
+      width: 46px;
+      height: 46px;
+      background: #140E1B;
+      border: 1.5px solid var(--gold);
+      color: var(--gold-bright);
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -2289,6 +2453,8 @@
       opacity: 0;
       visibility: hidden;
       transition: var(--transition-smooth);
+      box-shadow: 0 0 15px var(--gold-glow);
+      font-weight: 900;
     }
 
     #back-to-top.visible {
@@ -2297,9 +2463,9 @@
     }
 
     #back-to-top:hover {
-      background: var(--cyan);
-      color: var(--bg-dark);
-      box-shadow: 0 0 20px var(--cyan-glow);
+      background: var(--gold);
+      color: #050406;
+      box-shadow: 0 0 25px var(--gold-glow);
     }
 
     /* ==========================================================================
@@ -2339,7 +2505,7 @@
       .btn-broadcast-primary,
       .join-btn-large {
         width: 100%;
-        padding: 16px 20px;
+        padding: 18px 20px;
       }
       .btn-auction-results-action {
         flex-direction: column;
@@ -2375,20 +2541,23 @@
 </head>
 <body class="preloading">
 
-  <!-- Top Scroll Progress Line -->
+  <!-- Solar Energy Scroll Line -->
   <div id="scroll-progress"></div>
 
-  <!-- Ambient Matrix Overlay -->
+  <!-- Background Overlays -->
   <div class="bg-grid-overlay"></div>
+  <div class="ember-layer"></div>
 
   <!-- ==========================================================================
-       PRELOADER
+       PRELOADER — ASTRA 09 AWAKENING
        ========================================================================== -->
   <div id="preloader">
     <div class="preloader-content">
-      <div class="preloader-sub">SAMAL – ROUT CUP</div>
-      <div class="preloader-num">08</div>
-      <div class="preloader-title">CODE</div>
+      <div class="preloader-sub">SAMAL – ROUT CUP PRESENTS</div>
+      <div class="preloader-diya">🪔</div>
+      <div class="preloader-num">09</div>
+      <div class="preloader-title">ASTRA 09</div>
+      <div class="preloader-tagline">TEJAS, TATTVA, TRIUMPH: THE NINTH AWAKENING.</div>
       <div class="preloader-progress-track">
         <div class="preloader-progress-bar"></div>
       </div>
@@ -2402,7 +2571,7 @@
     <div class="container nav-container">
       <a href="#hero" class="nav-brand">
         <img src="logo.png" alt="Samal Rout Cup Logo" class="nav-logo" onerror="this.style.display='none'">
-        <span class="nav-brand-text">CODE – 08</span>
+        <span class="nav-brand-text">ASTRA 09</span>
       </a>
 
       <!-- Desktop Nav -->
@@ -2448,7 +2617,7 @@
 
     <!-- 1. HERO SECTION -->
     <section class="hero-section" id="hero">
-      <div class="hero-bg-num">08</div>
+      <div class="hero-bg-num">09</div>
       <div class="hero-light-sweep"></div>
 
       <div class="container hero-content">
@@ -2458,27 +2627,31 @@
 
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          <span class="hero-badge-text">SAMAL – ROUT CUP • SEASON 08</span>
+          <span class="hero-badge-text">SAMAL – ROUT CUP PRESENTS • SEASON 09</span>
         </div>
 
-        <h2 class="hero-title-sub">THE OFFICIAL AUCTION</h2>
-        <h1 class="hero-title-main">CODE – 08</h1>
-        <p class="hero-dossier">THE AUCTION DOSSIER</p>
+        <h2 class="hero-title-sub">THE DIVINE BATTLEFIELD AUCTION</h2>
+        <h1 class="hero-title-main">ASTRA 09</h1>
+
+        <div class="hero-tagline-box">
+          <p class="hero-tagline-main">TEJAS, TATTVA, TRIUMPH</p>
+          <p class="hero-tagline-sub">THE NINTH AWAKENING</p>
+        </div>
 
         <div class="hero-date-banner">
-          <span>26 SEPTEMBER 2026</span>
+          <span>5 NOVEMBER 2026</span>
           <span class="sep">•</span>
-          <span>20:00 IST</span>
+          <span>21:00 IST</span>
         </div>
 
         <div class="hero-micro-info">
           <span class="hero-micro-item">02 TEAMS</span>
           <span class="hero-micro-sep">•</span>
-          <span class="hero-micro-item">18 SLOTS</span>
+          <span class="hero-micro-item">20 SLOTS</span>
           <span class="hero-micro-sep">•</span>
           <span class="hero-micro-item">2000 PURSE</span>
           <span class="hero-micro-sep">•</span>
-          <span class="hero-micro-item">08 PICKS</span>
+          <span class="hero-micro-item">09 AUCTION PICKS</span>
         </div>
 
         <div class="hero-cta-group">
@@ -2501,8 +2674,8 @@
             <img src="auction.png" alt="Auction Results Preview" onerror="this.style.display='none'; document.getElementById('thumb-fallback').style.display='flex';">
             <div id="thumb-fallback" class="results-thumb-fallback" style="display: none;">
               <span>9:16</span>
-              <span style="font-weight: 800;">CODE</span>
-              <span>08</span>
+              <span>ASTRA</span>
+              <span>09</span>
             </div>
           </div>
           <div class="results-btn-meta">
@@ -2521,22 +2694,22 @@
     </section>
 
     <!-- ==========================================================================
-         3. "THE CODE" INTRODUCTION
+         3. "THE CODE" INTRODUCTION — THE NINTH AWAKENING
          ========================================================================== -->
     <section class="section-wrap" id="code-intro">
       <div class="container">
         <div class="intro-grid">
           <div class="intro-left">
-            <span class="intro-tag">THE NEXT CHAPTER</span>
-            <h2 class="intro-heading">CODE – 08</h2>
+            <span class="intro-tag">THE NINTH CHAPTER</span>
+            <h2 class="intro-heading">ASTRA – 09</h2>
           </div>
           <div class="intro-center-divider"></div>
           <div class="intro-right">
             <p class="intro-right-desc">
-              Samal–Rout Cup Season 08 introduces Code – 08, an exclusive auction chapter built around two teams, eight auction selections per team and a 2000-point starting purse.
+              Samal–Rout Cup Season 09 introduces Astra – 09, a majestic convergence of Diwali brilliance and battlefield fury. Two formidable houses—Real Madrid and Panda XI—contest for eighteen warriors across nine auction picks each, powered by a 2000-point starting war chest.
             </p>
           </div>
-          <div class="intro-watermark-08">08</div>
+          <div class="intro-watermark-08">09</div>
         </div>
 
         <div class="stats-grid">
@@ -2545,7 +2718,7 @@
             <div class="stat-label">TEAMS</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number" data-target="18">0</div>
+            <div class="stat-number" data-target="20">0</div>
             <div class="stat-label">TOTAL SQUAD SLOTS</div>
           </div>
           <div class="stat-card">
@@ -2553,7 +2726,7 @@
             <div class="stat-label">STARTING POINTS</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number" data-target="8">0</div>
+            <div class="stat-number" data-target="9">0</div>
             <div class="stat-label">AUCTION PICKS / TEAM</div>
           </div>
         </div>
@@ -2563,25 +2736,25 @@
     <!-- ==========================================================================
          4. EVENT INFORMATION SECTION (DASHBOARD)
          ========================================================================== -->
-    <section class="section-wrap" id="auction-info" style="background: rgba(9, 13, 21, 0.5);">
+    <section class="section-wrap" id="auction-info" style="background: rgba(11, 8, 14, 0.65);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">INFORMATION DOSSIER</span>
           <h2 class="section-title">THE AUCTION</h2>
-          <p class="section-subtitle">EVERY DETAIL. ONE CODE.</p>
+          <p class="section-subtitle">EVERY DETAIL. ONE ASTRA.</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
         <div class="info-dashboard-grid">
           <div class="info-tile">
             <span class="info-tile-label">DATE</span>
-            <div class="info-tile-value">26</div>
-            <div class="info-tile-sub">SEPTEMBER 2026</div>
+            <div class="info-tile-value">05</div>
+            <div class="info-tile-sub">NOVEMBER 2026</div>
           </div>
 
           <div class="info-tile">
             <span class="info-tile-label">TIME</span>
-            <div class="info-tile-value">20:00</div>
+            <div class="info-tile-value">21:00</div>
             <div class="info-tile-sub">INDIAN STANDARD TIME</div>
           </div>
 
@@ -2594,13 +2767,13 @@
           <div class="info-tile">
             <span class="info-tile-label">FORMAT</span>
             <div class="info-tile-value">02</div>
-            <div class="info-tile-sub">FRANCHISE TEAMS</div>
+            <div class="info-tile-sub">ROYAL FRANCHISES</div>
           </div>
 
           <div class="info-tile">
             <span class="info-tile-label">SQUAD ROSTER</span>
-            <div class="info-tile-value">09</div>
-            <div class="info-tile-sub">PLAYERS PER TEAM</div>
+            <div class="info-tile-value">10</div>
+            <div class="info-tile-sub">PLAYERS PER TEAM (1 CAPT + 9 PICKS)</div>
           </div>
 
           <div class="info-tile">
@@ -2613,281 +2786,303 @@
     </section>
 
     <!-- ==========================================================================
-         5. THE TWO HOUSES (SQUADS WITH PERFECT ALIGNMENT)
+         5. THE TWO HOUSES (REAL MADRID & PANDA XI)
          ========================================================================== -->
     <section class="section-wrap" id="teams">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">FRANCHISE CONTENDERS</span>
           <h2 class="section-title">THE TWO HOUSES</h2>
-          <p class="section-subtitle">OFFICIAL SQUAD ROSTERS • 9 PLAYERS PER TEAM</p>
+          <p class="section-subtitle">REAL MADRID & PANDA XI • 10 SLOTS PER TEAM</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
         <div class="both-teams-container">
           
-          <!-- HOUSE 01: LEGIONS XI -->
-          <div class="team-house-panel team-legions" id="panel-legions">
+          <!-- HOUSE 01: REAL MADRID (CAPTAIN ASMIT) -->
+          <div class="team-house-panel team-madrid" id="panel-madrid">
             <div class="team-header-row">
               <span class="team-badge">TEAM 01</span>
               <span class="team-code-tag">HOUSE I</span>
             </div>
 
-            <h3 class="team-name-title">LEGIONS XI</h3>
+            <h3 class="team-name-title">REAL MADRID</h3>
 
             <div class="team-quick-stats">
               <div class="quick-stat-box">
                 <div class="quick-stat-label">CAPTAIN</div>
-                <div class="quick-stat-val" style="color: var(--crimson-bright);">SUBU</div>
+                <div class="quick-stat-val" style="color: var(--gold-bright);">ASMIT</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">TOTAL SPENT</div>
-                <div class="quick-stat-val" style="color: var(--crimson-bright);">2000 PTS</div>
+                <div class="quick-stat-label">WAR CHEST</div>
+                <div class="quick-stat-val" style="color: var(--gold-bright);">2000 PTS</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">SQUAD STATUS</div>
-                <div class="quick-stat-val">9 / 9 FULL</div>
+                <div class="quick-stat-label">SQUAD GOAL</div>
+                <div class="quick-stat-val">10 PLAYERS</div>
               </div>
             </div>
 
             <div class="squad-roster-title">
-              <span>CONFIRMED SQUAD ROSTER</span>
-              <span style="font-size: 0.72rem; color: var(--crimson-bright);">2000 / 2000 PURSE</span>
+              <span>OFFICIAL SQUAD ROSTER</span>
+              <span style="font-size: 0.74rem; color: var(--gold-bright);">1 CAPTAIN + 9 PICKS</span>
             </div>
 
             <div class="squad-roster-list">
-              <!-- 01: Subu (Captain) -->
+              <!-- Slot 01: Asmit (Captain) -->
               <div class="roster-slot-row captain-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">01</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">SUBU</span>
+                    <span class="slot-role-name">ASMIT</span>
                     <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
                   </div>
                 </div>
                 <span class="slot-status-pill">0 PTS</span>
               </div>
 
-              <!-- 02: Lala (Vice Captain) -->
+              <!-- Slots 02 to 10: 9 Auction Picks -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">02</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">LALA</span>
-                    <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 01</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">610 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 03: Asmit -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">03</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">ASMIT</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 02</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">800 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 04: Om -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">04</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">OM</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 03</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">300 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 05: Horo -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">05</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">HORO</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 04</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">160 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 06: Riku -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">06</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">RIKU</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 05</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">100 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 07: Nisi -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">07</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">NISI</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 06</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">10 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 08: Chandan -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">08</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">CHANDAN</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 07</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">10 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 09: Shreyash -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">09</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">SHREYASH</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 08</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">10 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
+              </div>
+
+              <div class="roster-slot-row regular-slot">
+                <div class="roster-slot-left">
+                  <span class="slot-id">10</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 09</span>
+                  </div>
+                </div>
+                <span class="slot-status-pill">— PTS</span>
               </div>
             </div>
           </div>
 
-          <!-- HOUSE 02: GANAPATI STARS -->
-          <div class="team-house-panel team-ganapati" id="panel-ganapati">
+          <!-- HOUSE 02: PANDA XI (CAPTAIN PANDA) -->
+          <div class="team-house-panel team-panda" id="panel-panda">
             <div class="team-header-row">
               <span class="team-badge">TEAM 02</span>
               <span class="team-code-tag">HOUSE II</span>
             </div>
 
-            <h3 class="team-name-title">GANAPATI STARS</h3>
+            <h3 class="team-name-title">PANDA XI</h3>
 
             <div class="team-quick-stats">
               <div class="quick-stat-box">
                 <div class="quick-stat-label">CAPTAIN</div>
-                <div class="quick-stat-val" style="color: var(--cyan-bright);">SAI</div>
+                <div class="quick-stat-val" style="color: var(--saffron-bright);">PANDA</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">TOTAL SPENT</div>
-                <div class="quick-stat-val" style="color: var(--cyan-bright);">1600 PTS</div>
+                <div class="quick-stat-label">WAR CHEST</div>
+                <div class="quick-stat-val" style="color: var(--saffron-bright);">2000 PTS</div>
               </div>
               <div class="quick-stat-box">
-                <div class="quick-stat-label">SQUAD STATUS</div>
-                <div class="quick-stat-val">9 / 9 FULL</div>
+                <div class="quick-stat-label">SQUAD GOAL</div>
+                <div class="quick-stat-val">10 PLAYERS</div>
               </div>
             </div>
 
             <div class="squad-roster-title">
-              <span>CONFIRMED SQUAD ROSTER</span>
-              <span style="font-size: 0.72rem; color: var(--cyan-bright);">1600 / 2000 PURSE</span>
+              <span>OFFICIAL SQUAD ROSTER</span>
+              <span style="font-size: 0.74rem; color: var(--saffron-bright);">1 CAPTAIN + 9 PICKS</span>
             </div>
 
             <div class="squad-roster-list">
-              <!-- 01: Sai (Captain) -->
+              <!-- Slot 01: Panda (Captain) -->
               <div class="roster-slot-row captain-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">01</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">SAI</span>
+                    <span class="slot-role-name">PANDA</span>
                     <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
                   </div>
                 </div>
                 <span class="slot-status-pill">0 PTS</span>
               </div>
 
-              <!-- 02: Babuma (Vice Captain) -->
+              <!-- Slots 02 to 10: 9 Auction Picks -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">02</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">BABUMA</span>
-                    <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 01</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">1010 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 03: Jaddu -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">03</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">JADDU</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 02</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">250 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 04: Suryansh -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">04</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">SURYANSH</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 03</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">110 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 05: Rudra -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">05</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">RUDRA</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 04</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">100 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 06: Gourav -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">06</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">GOURAV</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 05</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">100 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 07: Yash -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">07</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">YASH</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 06</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">10 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 08: Rohit -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">08</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">ROHIT</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 07</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">10 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
               </div>
 
-              <!-- 09: Pappu -->
               <div class="roster-slot-row regular-slot">
                 <div class="roster-slot-left">
                   <span class="slot-id">09</span>
                   <div class="slot-player-identity">
-                    <span class="slot-role-name">PAPPU</span>
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 08</span>
                   </div>
                 </div>
-                <span class="slot-status-pill">10 PTS</span>
+                <span class="slot-status-pill">— PTS</span>
+              </div>
+
+              <div class="roster-slot-row regular-slot">
+                <div class="roster-slot-left">
+                  <span class="slot-id">10</span>
+                  <div class="slot-player-identity">
+                    <span class="slot-role-name">TBD</span>
+                    <span class="badge-role-pill badge-pool">AUCTION PICK 09</span>
+                  </div>
+                </div>
+                <span class="slot-status-pill">— PTS</span>
               </div>
             </div>
           </div>
@@ -2897,14 +3092,14 @@
     </section>
 
     <!-- ==========================================================================
-         6. ALL PLAYERS REGISTER (SORTED IN DESCENDING ORDER OF SELLING PRICE)
+         6. ALL PLAYERS REGISTER (TOTAL 20 PLAYERS)
          ========================================================================== -->
-    <section class="section-wrap" id="players-register" style="background: rgba(9, 13, 21, 0.5);">
+    <section class="section-wrap" id="players-register" style="background: rgba(11, 8, 14, 0.65);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">OFFICIAL AUCTION RECORD</span>
           <h2 class="section-title">ALL PLAYERS REGISTER</h2>
-          <p class="section-subtitle">ORDERED BY SELLING PRICE (HIGHEST TO LOWEST)</p>
+          <p class="section-subtitle">TOTAL 20 WARRIORS • PRE-SELECTED CAPTAINS & TBD POOL</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
@@ -2912,16 +3107,17 @@
           <!-- Toolbar with Filter Tabs and Search -->
           <div class="register-toolbar">
             <div class="filter-tabs">
-              <button type="button" class="filter-tab-btn active" data-filter="all">ALL PLAYERS (18)</button>
-              <button type="button" class="filter-tab-btn" data-filter="legions">LEGIONS XI (9)</button>
-              <button type="button" class="filter-tab-btn" data-filter="ganapati">GANAPATI STARS (9)</button>
+              <button type="button" class="filter-tab-btn active" data-filter="all">ALL WARRIORS (20)</button>
+              <button type="button" class="filter-tab-btn" data-filter="madrid">REAL MADRID</button>
+              <button type="button" class="filter-tab-btn" data-filter="panda">PANDA XI</button>
+              <button type="button" class="filter-tab-btn" data-filter="pool">AUCTION POOL (18)</button>
             </div>
             <div>
               <input type="text" id="player-search-input" class="search-box-input" placeholder="Search player or team..." aria-label="Search players">
             </div>
           </div>
 
-          <!-- Aligned 4-Column Table Sorted in Descending Order of Price -->
+          <!-- Aligned 4-Column Table -->
           <div class="register-table-scroll">
             <table class="register-table" id="player-records-table">
               <thead>
@@ -2934,260 +3130,161 @@
               </thead>
               <tbody id="player-rows-body">
                 
-                <!-- Rank 01: 1010 PTS -->
-                <tr data-team="ganapati">
+                <!-- 01: Asmit (Captain - Real Madrid) -->
+                <tr data-team="madrid">
                   <td class="col-num">01</td>
                   <td class="col-player">
                     <div class="player-name-wrapper">
-                      <span>BABUMA</span>
-                      <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
+                      <span>ASMIT</span>
+                      <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
                     </div>
                   </td>
-                  <td class="col-price">1010 PTS</td>
+                  <td class="col-price">0 PTS</td>
                   <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
+                    <span class="team-sold-badge badge-madrid">REAL MADRID</span>
                   </td>
                 </tr>
 
-                <!-- Rank 02: 800 PTS -->
-                <tr data-team="legions">
+                <!-- 02: Panda (Captain - Panda XI) -->
+                <tr data-team="panda">
                   <td class="col-num">02</td>
                   <td class="col-player">
                     <div class="player-name-wrapper">
-                      <span>ASMIT</span>
+                      <span>PANDA</span>
+                      <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
                     </div>
                   </td>
-                  <td class="col-price">800 PTS</td>
+                  <td class="col-price">0 PTS</td>
                   <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
+                    <span class="team-sold-badge badge-panda">PANDA XI</span>
                   </td>
                 </tr>
 
-                <!-- Rank 03: 610 PTS -->
-                <tr data-team="legions">
+                <!-- 03 to 20: 18 Auction Pool Players (Reset to TBD) -->
+                <tr data-team="pool">
                   <td class="col-num">03</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>LALA</span>
-                      <span class="badge-role-pill badge-vc">⚡ VICE CAPTAIN</span>
-                    </div>
-                  </td>
-                  <td class="col-price">610 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 01)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 04: 300 PTS -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">04</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>OM</span>
-                    </div>
-                  </td>
-                  <td class="col-price">300 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 02)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 05: 250 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">05</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>JADDU</span>
-                    </div>
-                  </td>
-                  <td class="col-price">250 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 03)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 06: 160 PTS -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">06</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>HORO</span>
-                    </div>
-                  </td>
-                  <td class="col-price">160 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 04)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 07: 110 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">07</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>SURYANSH</span>
-                    </div>
-                  </td>
-                  <td class="col-price">110 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 05)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 08: 100 PTS -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">08</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>RIKU</span>
-                    </div>
-                  </td>
-                  <td class="col-price">100 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 06)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 09: 100 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">09</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>RUDRA</span>
-                    </div>
-                  </td>
-                  <td class="col-price">100 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 07)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 10: 100 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">10</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>GOURAV</span>
-                    </div>
-                  </td>
-                  <td class="col-price">100 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 08)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 11: 10 PTS -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">11</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>NISI</span>
-                    </div>
-                  </td>
-                  <td class="col-price">10 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 09)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 12: 10 PTS -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">12</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>CHANDAN</span>
-                    </div>
-                  </td>
-                  <td class="col-price">10 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 10)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 13: 10 PTS -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">13</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>SHREYASH</span>
-                    </div>
-                  </td>
-                  <td class="col-price">10 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 11)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 14: 10 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">14</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>YASH</span>
-                    </div>
-                  </td>
-                  <td class="col-price">10 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 12)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 15: 10 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">15</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>ROHIT</span>
-                    </div>
-                  </td>
-                  <td class="col-price">10 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 13)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 16: 10 PTS -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">16</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>PAPPU</span>
-                    </div>
-                  </td>
-                  <td class="col-price">10 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 14)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 17: 0 PTS (Captain) -->
-                <tr data-team="legions">
+                <tr data-team="pool">
                   <td class="col-num">17</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>SUBU</span>
-                      <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
-                    </div>
-                  </td>
-                  <td class="col-price">0 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-legions">LEGIONS XI</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 15)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
-                <!-- Rank 18: 0 PTS (Captain) -->
-                <tr data-team="ganapati">
+                <tr data-team="pool">
                   <td class="col-num">18</td>
-                  <td class="col-player">
-                    <div class="player-name-wrapper">
-                      <span>SAI</span>
-                      <span class="badge-role-pill badge-captain">👑 CAPTAIN</span>
-                    </div>
-                  </td>
-                  <td class="col-price">0 PTS</td>
-                  <td class="col-team">
-                    <span class="team-sold-badge badge-ganapati">GANAPATI STARS</span>
-                  </td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 16)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
+                </tr>
+
+                <tr data-team="pool">
+                  <td class="col-num">19</td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 17)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
+                </tr>
+
+                <tr data-team="pool">
+                  <td class="col-num">20</td>
+                  <td class="col-player"><div class="player-name-wrapper"><span>TBD (WARRIOR 18)</span><span class="badge-role-pill badge-pool">POOL</span></div></td>
+                  <td class="col-price">TBD</td>
+                  <td class="col-team"><span class="team-sold-badge badge-pool">AUCTION POOL</span></td>
                 </tr>
 
               </tbody>
@@ -3211,17 +3308,17 @@
 
         <div class="warchest-panels">
           <div class="warchest-card">
-            <div class="warchest-team-name">LEGIONS XI</div>
-            <div class="warchest-divider-bar" style="background: var(--crimson);"></div>
+            <div class="warchest-team-name">REAL MADRID</div>
+            <div class="warchest-divider-bar" style="background: var(--gold);"></div>
             <div class="warchest-points">2000</div>
-            <div class="warchest-points-sub">STARTING AUCTION POINTS (2000 SPENT)</div>
+            <div class="warchest-points-sub">STARTING AUCTION POINTS</div>
           </div>
 
           <div class="warchest-card">
-            <div class="warchest-team-name">GANAPATI STARS</div>
-            <div class="warchest-divider-bar"></div>
+            <div class="warchest-team-name">PANDA XI</div>
+            <div class="warchest-divider-bar" style="background: var(--saffron);"></div>
             <div class="warchest-points">2000</div>
-            <div class="warchest-points-sub">STARTING AUCTION POINTS (1600 SPENT)</div>
+            <div class="warchest-points-sub">STARTING AUCTION POINTS</div>
           </div>
         </div>
 
@@ -3241,7 +3338,7 @@
     <!-- ==========================================================================
          8. BIDDING SYSTEM (+10 CENTERPIECE)
          ========================================================================== -->
-    <section class="section-wrap" id="bid-system" style="background: rgba(9, 13, 21, 0.4);">
+    <section class="section-wrap" id="bid-system" style="background: rgba(11, 8, 14, 0.65);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">BID CODE</span>
@@ -3304,16 +3401,16 @@
           <div class="rule-card">
             <div class="rule-number">01</div>
             <div class="rule-content">
-              <h3>TWO TEAMS</h3>
-              <p>The auction consists of Legions XI and Ganapati Stars.</p>
+              <h3>TWO HOUSES</h3>
+              <p>The auction consists of Real Madrid and Panda XI.</p>
             </div>
           </div>
 
           <div class="rule-card">
             <div class="rule-number">02</div>
             <div class="rule-content">
-              <h3>NINE PLAYER SQUADS</h3>
-              <p>Each team must finish with nine players.</p>
+              <h3>TEN PLAYER SQUADS</h3>
+              <p>Each team must finish with 10 players total (1 Captain + 9 Auction Picks).</p>
             </div>
           </div>
 
@@ -3321,7 +3418,7 @@
             <div class="rule-number">03</div>
             <div class="rule-content">
               <h3>CAPTAINS PRE-SELECTED</h3>
-              <p>Each captain is secured before the auction.</p>
+              <p>Captain Asmit (Real Madrid) and Captain Panda (Panda XI) are pre-selected.</p>
             </div>
           </div>
 
@@ -3336,8 +3433,8 @@
           <div class="rule-card">
             <div class="rule-number">05</div>
             <div class="rule-content">
-              <h3>EIGHT AUCTION PICKS</h3>
-              <p>Each team selects eight additional players.</p>
+              <h3>NINE AUCTION PICKS</h3>
+              <p>Each team selects nine additional players from the pool.</p>
             </div>
           </div>
 
@@ -3345,7 +3442,7 @@
             <div class="rule-number">06</div>
             <div class="rule-content">
               <h3>2000 POINT PURSE</h3>
-              <p>Each team begins with 2000 points.</p>
+              <p>Each team begins with 2000 points in their war chest.</p>
             </div>
           </div>
 
@@ -3377,7 +3474,7 @@
             <div class="rule-number">10</div>
             <div class="rule-content">
               <h3>EVERY PLAYER MUST BE SOLD</h3>
-              <p>An unsold player returns to the pool.</p>
+              <p>An unsold player returns to the pool. No warrior is left behind.</p>
             </div>
           </div>
         </div>
@@ -3387,7 +3484,7 @@
     <!-- ==========================================================================
          10. "THE SECOND CALL" (RE-ENTRY PROCESS)
          ========================================================================== -->
-    <section class="section-wrap" id="second-call" style="background: rgba(9, 13, 21, 0.4);">
+    <section class="section-wrap" id="second-call" style="background: rgba(11, 8, 14, 0.65);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">RE-ENTRY SYSTEM</span>
@@ -3397,7 +3494,7 @@
         </div>
 
         <div class="second-call-box">
-          <h3 class="second-call-banner">NO PLAYER IS LEFT BEHIND.</h3>
+          <h3 class="second-call-banner">NO WARRIOR IS LEFT BEHIND.</h3>
           <p class="second-call-desc">
             “If a player remains unsold during the initial call, that player returns to the re-entry pool and is presented again. The process continues until every player has been sold.”
           </p>
@@ -3411,7 +3508,7 @@
               <div class="flow-node sold">SOLD</div>
             </div>
 
-            <div class="flow-arrow-v">↓ <span style="font-size: 0.75rem; letter-spacing: 2px;">(IF UNSOLD)</span></div>
+            <div class="flow-arrow-v">↓ <span style="font-size: 0.78rem; letter-spacing: 2px; font-weight: 800;">(IF UNSOLD)</span></div>
 
             <div class="flow-row">
               <div class="flow-node re-entry">RE-ENTRY POOL</div>
@@ -3433,7 +3530,7 @@
         <div class="section-header">
           <span class="section-tag">PROCEDURE</span>
           <h2 class="section-title">THE AUCTION JOURNEY</h2>
-          <p class="section-subtitle">STAGE BY STAGE CHRONOLOGY</p>
+          <p class="section-subtitle">STAGE BY STAGE CAMPAIGN</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
@@ -3477,12 +3574,12 @@
     <!-- ==========================================================================
          12. THE ARCHITECTS (ORGANISERS)
          ========================================================================== -->
-    <section class="section-wrap" id="architects" style="background: rgba(9, 13, 21, 0.4);">
+    <section class="section-wrap" id="architects" style="background: rgba(11, 8, 14, 0.65);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">GOVERNING COMMITTEE</span>
           <h2 class="section-title">THE ARCHITECTS</h2>
-          <p class="section-subtitle">CODE – 08 ORGANISING BODY</p>
+          <p class="section-subtitle">ASTRA 09 ORGANISING BODY</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
@@ -3524,9 +3621,9 @@
     <section class="section-wrap" id="countdown">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">CHRONOMETER</span>
-          <h2 class="section-title">THE CODE AWAKENS IN</h2>
-          <p class="section-subtitle">26 SEPTEMBER 2026 • 20:00 IST</p>
+          <span class="section-tag">ROYAL CHRONOMETER</span>
+          <h2 class="section-title">THE NINTH AWAKENING IN</h2>
+          <p class="section-subtitle">5 NOVEMBER 2026 • 21:00 IST</p>
           <div class="broadcast-divider-center"></div>
         </div>
 
@@ -3549,7 +3646,7 @@
               <div class="countdown-lbl">SECONDS</div>
             </div>
           </div>
-          <div class="countdown-live-msg" id="countdown-live">CODE – 08 IS LIVE</div>
+          <div class="countdown-live-msg" id="countdown-live">ASTRA 09 IS LIVE</div>
         </div>
       </div>
     </section>
@@ -3558,19 +3655,19 @@
          14. MAJOR JOIN CTA
          ========================================================================== -->
     <section class="join-section" id="join">
-      <div class="join-bg-num">08</div>
+      <div class="join-bg-num">09</div>
       <div class="container join-content">
-        <span class="section-tag">OFFICIAL ACCESS</span>
-        <h2 class="section-title" style="margin-top: 8px;">ENTER THE AUCTION ROOM</h2>
-        <p class="section-subtitle" style="color: var(--cyan); margin-bottom: 10px;">
-          26 SEPTEMBER 2026 • 20:00 IST
+        <span class="section-tag">ROYAL ENTRANCE</span>
+        <h2 class="section-title" style="margin-top: 8px;">ENTER THE AUCTION ARENA</h2>
+        <p class="section-subtitle" style="color: var(--gold-bright); margin-bottom: 10px;">
+          5 NOVEMBER 2026 • 21:00 IST
         </p>
-        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 580px; margin: 0 auto;">
-          Connect directly to the official Code – 08 platform. Real-time updates, player releases, and tactical bidding calls.
+        <p style="color: #F0E6D2; font-size: 0.98rem; max-width: 580px; margin: 0 auto;">
+          Connect directly to the official Astra 09 platform. Real-time updates, player releases, and tactical bidding calls.
         </p>
 
         <a href="https://chat.whatsapp.com/" target="_blank" rel="noopener noreferrer" class="join-btn-large">
-          <span>JOIN THE OFFICIAL PLATFORM</span>
+          <span>JOIN THE OFFICIAL ARENA</span>
           <span>→</span>
         </a>
       </div>
@@ -3581,12 +3678,13 @@
          ========================================================================== -->
     <section class="final-outro-section">
       <div class="container">
-        <p class="final-statement">THE CODE HAS BEEN WRITTEN.</p>
-        <div class="final-giant-08">08</div>
+        <p class="final-statement">THE ASTRA HAS BEEN SUMMONED.</p>
+        <div class="final-giant-08">09</div>
         <div class="final-cup-title">SAMAL – ROUT CUP</div>
-        <div class="final-season">SEASON 08 • CODE – 08</div>
+        <div class="final-season">ASTRA 09 • THE NINTH AWAKENING</div>
+        <div class="final-tagline-text">TEJAS, TATTVA, TRIUMPH: THE NINTH AWAKENING.</div>
         <div class="final-line"></div>
-        <p class="final-closing">THE NEXT CHAPTER BEGINS.</p>
+        <p class="final-closing">A NEW CHAPTER. THE SAME LEGACY.</p>
       </div>
     </section>
 
@@ -3597,8 +3695,8 @@
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
-      <div>SAMAL – ROUT CUP SEASON 08 • CODE – 08</div>
-      <div>OFFICIAL AUCTION INFORMATION</div>
+      <div>SAMAL – ROUT CUP • ASTRA 09</div>
+      <div>OFFICIAL AUCTION INFORMATION & SQUAD DOSSIER</div>
       <div>ORGANISED BY <span>LALA BHAI • SUBU • ASMIT • BABUMA</span></div>
       <div style="margin-top: 10px; color: var(--text-dim);">© 2026 SAMAL – ROUT CUP. ALL RIGHTS RESERVED.</div>
     </div>
@@ -3617,29 +3715,29 @@
     </button>
 
     <div class="story-viewer-card" id="story-card">
-      <img src="auction.png" alt="Samal–Rout Cup Code-08 Official Auction Results" onerror="this.style.display='none'; document.getElementById('story-fallback-full').style.display='flex';">
+      <img src="auction.png" alt="Samal–Rout Cup Astra 09 Official Auction Results" onerror="this.style.display='none'; document.getElementById('story-fallback-full').style.display='flex';">
       
       <div class="poster-story-fallback" id="story-fallback-full" style="display: none;">
         <div class="story-fallback-header">
-          <div class="sub">SAMAL–ROUT CUP • SEASON 08</div>
-          <div class="main">AUCTION RESULTS</div>
+          <div class="sub">SAMAL–ROUT CUP • SEASON 09</div>
+          <div class="main">ASTRA 09</div>
         </div>
 
         <div class="story-fallback-center">
-          <div class="story-big-code">08</div>
-          <p style="font-size: 0.85rem; letter-spacing: 4px; color: var(--cyan); text-transform: uppercase;">
-            OFFICIAL RESULTS DOSSIER
+          <div class="story-big-code">09</div>
+          <p style="font-size: 0.9rem; letter-spacing: 4px; color: var(--gold-bright); text-transform: uppercase; font-weight: 800;">
+            TEJAS, TATTVA, TRIUMPH
           </p>
           <div class="story-fallback-teams">
-            <span class="story-team-1">LEGIONS XI</span>
+            <span class="story-team-1">REAL MADRID (ASMIT)</span>
             <span class="story-team-vs">VS</span>
-            <span class="story-team-2">GANAPATI STARS</span>
+            <span class="story-team-2">PANDA XI (PANDA)</span>
           </div>
         </div>
 
         <div class="story-fallback-footer">
-          <div class="story-date-badge">26 SEPTEMBER 2026 • 20:00 IST</div>
-          <div class="story-footnote">9 PLAYERS PER TEAM • 2000 PURSE</div>
+          <div class="story-date-badge">5 NOVEMBER 2026 • 21:00 IST</div>
+          <div class="story-footnote">10 PLAYERS PER TEAM • 2000 PURSE</div>
         </div>
       </div>
     </div>
@@ -3710,7 +3808,7 @@
         });
       }
 
-      /* 4. Full-Screen 9:16 Auction Results Modal (auction.png) */
+      /* 4. Full-Screen 9:16 Auction Results Modal */
       const openPosterBtn = document.getElementById('open-poster-btn');
       const closePosterBtn = document.getElementById('close-poster-btn');
       const posterLightbox = document.getElementById('poster-lightbox');
@@ -3856,8 +3954,8 @@
         timelineObserver.observe(timelineSection);
       }
 
-      /* 9. Countdown Engine (26 Sept 2026, 20:00:00 IST) */
-      const targetDate = new Date('2026-09-26T20:00:00+05:30').getTime();
+      /* 9. Countdown Engine (Target: 5th November 2026, 21:00:00 IST) */
+      const targetDate = new Date('2026-11-05T21:00:00+05:30').getTime();
       const daysEl = document.getElementById('days');
       const hoursEl = document.getElementById('hours');
       const minutesEl = document.getElementById('minutes');
